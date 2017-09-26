@@ -1,16 +1,19 @@
 import React from 'react'
-import { format } from 'prettier/index.js'
-import babylon from 'prettier/parser-babylon'
+//import { format } from 'prettier/index.js'
+//import babylon from 'prettier/parser-babylon'
 import PropTypes from 'prop-types'
 import Editor from './Editor'
 
+/**
 const pretty = doc => {
   return format(doc, {
     parser: babylon,
     semi: false,
     singleQuote: true,
   }).substring(1)
-}
+}**/
+
+const pretty = doc => doc
 
 export default class Code extends React.Component {
   static propTypes = {
