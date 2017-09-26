@@ -1,0 +1,18 @@
+{
+  "name": "@allthings/elements",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/allthings/elements",
+  "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@allthings/react-view": "^1.4.0",
+    "glamor": "^2.20.40",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.2",
+    "storybook": "^1.0.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -s public -p 6006"
+  }
+}
