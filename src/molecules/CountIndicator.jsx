@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Circle from '../atoms/Circle'
-import Text from 'components/Text'
+import Text from '../atoms/Text'
 import Absolute from '../atoms/Absolute'
 
 class CountIndicator extends React.Component {

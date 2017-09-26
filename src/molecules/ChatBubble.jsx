@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from 'glamor'
-import Text from 'components/Text'
-import UserProfileImage from 'components/UserProfileImage'
-import ProfileImage from 'components/ProfileImage'
+import Text from '../atoms/Text'
+import ProfileImage from '../molecules/ProfileImage'
 import Theme from '../behaviour/Theme'
 
 const styles = {
@@ -102,21 +101,11 @@ class ChatBubble extends React.Component {
 
   renderProfileImage() {
     const { userImage } = this.props
-    if (typeof userImage !== 'string') {
-      return <UserProfileImage profileImage={userImage} size="medium" />
-    } else {
-      return <ProfileImage size="medium" image={userImage} />
-    }
+    return <ProfileImage size="medium" image={userImage} />
   }
 
   render() {
-    const {
-      userName,
-      date,
-      background,
-      direction,
-      text,
-    } = this.props
+    const { userName, date, background, direction, text } = this.props
     const isReversed = direction === 'right'
 
     return (

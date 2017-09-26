@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, CardButton, CardContent, CardFooter } from 'components/Card'
-import Text from 'components/Text'
+import { Card, CardButton, CardContent, CardFooter } from '../../../src/molecules/Card'
+import Text from '../../../src/atoms/Text'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'

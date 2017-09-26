@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from 'components/Slider'
+import Slider from '../../../src/molecules/Slider'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'

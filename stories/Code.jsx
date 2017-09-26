@@ -1,6 +1,7 @@
 import React from 'react'
 import { format } from 'prettier/index.js'
 import babylon from 'prettier/parser-babylon'
+import PropTypes from 'prop-types'
 import Editor from './Editor'
 
 const pretty = doc => {
@@ -13,7 +14,7 @@ const pretty = doc => {
 
 export default class Code extends React.Component {
   static propTypes = {
-    children: React.PropTypes.node,
+    children: PropTypes.node,
   }
 
   shouldComponentUpdate() {

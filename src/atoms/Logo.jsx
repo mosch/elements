@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Image from 'components/Image'
+import Image from './Image'
 import View from '@allthings/react-view'
 
 class Logo extends React.Component {

@@ -1,12 +1,14 @@
 import React from 'react'
-import Text from 'components/Text'
+import Text from '../../../src/atoms/Text'
 import View from '@allthings/react-view'
-import * as Icons from '@allthings/react-icons/src/index'
-import CardList from 'components/CardList/CardList'
-import ListItem from 'components/List/ListItem'
+//import * as Icons from '@allthings/react-icons/src/index'
+import CardList from '../../../src/organisms/CardList/CardList'
+import ListItem from '../../../src/molecules/List/ListItem'
 import Example from '../../Example'
 import Notes from '../../Notes'
-import Icon from 'ui/atoms/Icon'
+import Icon from '../../../src/atoms/Icon'
+
+const Icons = {}
 
 class IconStory extends React.Component {
   render() {

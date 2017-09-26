@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileImage from 'components/ProfileImage'
+import ProfileImage from '../../../src/molecules/ProfileImage'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'

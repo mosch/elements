@@ -5,7 +5,7 @@ import View from '@allthings/react-view'
 import { colorCode } from '../propTypes/color'
 import { withTheme } from '../behaviour/ThemeProvider'
 import Inset from '../atoms/Inset'
-import Text from 'components/Text'
+import Text from '../atoms/Text'
 
 const heroStyle = background =>
   css({

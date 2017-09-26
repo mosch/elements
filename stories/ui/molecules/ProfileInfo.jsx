@@ -1,16 +1,16 @@
 import React from 'react'
-import CardList from 'components/CardList/CardList'
-import GroupedCardList from 'components/CardList/GroupedCardList'
-import ListItem from 'components/List/ListItem'
-import ChevronRightListItem from 'components/List/ChevronRightListItem'
+import CardList from '../../../src/organisms/CardList/CardList'
+import GroupedCardList from '../../../src/organisms/CardList/GroupedCardList'
+import ListItem from '../../../src/molecules/List/ListItem'
+import ChevronRightListItem from '../../../src/molecules/List/ChevronRightListItem'
 import {
   Card,
   CardButton,
   CardContent,
   CardFooter,
   Spacer,
-} from 'components/Card'
-import Text from 'components/Text'
+} from '../../../src/molecules/Card'
+import Text from '../../../src/atoms/Text'
 import ProfileImage from 'components/ProfileImage'
 import View from '@allthings/react-view'
 

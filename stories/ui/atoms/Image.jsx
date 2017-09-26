@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'components/Image'
+import Image from '../../../src/atoms/Image'
 import View from '@allthings/react-view'
 import { action } from '@storybook/react'
 import Example from '../../Example'

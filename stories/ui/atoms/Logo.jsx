@@ -2,9 +2,9 @@ import React from 'react'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'
-import Logo from 'ui/atoms/Logo'
-import Relative from 'ui/atoms/Relative'
-import CountIndicator from 'ui/molecules/CountIndicator'
+import Logo from '../../../src/atoms/Logo'
+import Relative from '../../../src/atoms/Relative'
+import CountIndicator from '../../../src/molecules/CountIndicator'
 
 class LogoStory extends React.Component {
   state = {

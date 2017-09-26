@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import { alpha } from '@allthings/colors'
 import View from '@allthings/react-view'
-import Text from 'components/Text'
+import Text from '../atoms/Text'
 import SquareIconButton from '../molecules/SquareIconButton'
 import { color, colorCode } from '../propTypes/color'
 

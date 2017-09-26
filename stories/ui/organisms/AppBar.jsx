@@ -1,5 +1,5 @@
 import React from 'react'
-import AppBar from 'ui/organisms/AppBar'
+import AppBar from '../../../src/organisms/AppBar'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'

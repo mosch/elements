@@ -6,8 +6,8 @@ import Code from './Code'
 import ReactDOMServer from 'react-dom/server'
 import { renderStatic } from 'glamor/server'
 import Frame from 'react-frame-component'
-import ThemeProvider from 'ui/behaviour/ThemeProvider'
-import { getTheme } from 'utils/themes'
+import ThemeProvider from '../src/behaviour/ThemeProvider'
+import { getTheme } from './utils/themes'
 
 class Purify extends React.PureComponent {
   render() {

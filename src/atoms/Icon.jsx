@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import View from '@allthings/react-view'
-import * as Icons from '@allthings/react-icons/src/index'
+//import * as Icons from '@allthings/react-icons/src/index'
 import Theme from '../behaviour/Theme'
+
+Icons = {}
 
 /**
  * Icons are used to visually communicate core parts of the product and
@@ -59,18 +61,16 @@ class Icon extends React.Component {
             alignH="center"
             alignV="center"
           >
-            {icon ? (
-              icon({
-                style: {
-                  width: width,
-                  height: height,
-                  fill: isFilled && colorize(color),
-                  stroke: !isFilled && colorize(color),
-                },
-              })
-            ) : (
-              'Icon not found'
-            )}
+            {icon
+              ? icon({
+                  style: {
+                    width: width,
+                    height: height,
+                    fill: isFilled && colorize(color),
+                    stroke: !isFilled && colorize(color),
+                  },
+                })
+              : 'Icon not found'}
             {children}
           </View>
         )}

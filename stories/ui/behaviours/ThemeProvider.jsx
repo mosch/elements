@@ -4,9 +4,9 @@ import Example from '../../Example'
 import Notes from '../../Notes'
 import Editor from '../../Editor'
 
-import ThemeProvider from 'ui/behaviour/ThemeProvider'
+import ThemeProvider from '../../../src/behaviour/ThemeProvider'
 
-import Button from 'components/Button'
+import Button from '../../../src/molecules/Button'
 
 class ThemeProviderStory extends React.Component {
   render() {
@@ -21,7 +21,7 @@ class ThemeProviderStory extends React.Component {
           <pre>withTheme(Component, [mapThemeToProps], [displayName])</pre>
         </p>
         <Editor
-          code={`import { withTheme } from 'ui/behaviours/ThemeProvider'`}
+          code={`import { withTheme } from '../../../src/behaviours/ThemeProvider'`}
         />
         <p>
           Simply wrap a component with <code>withTheme</code> and a property{' '}

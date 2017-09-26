@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from 'components/Button'
+import Button from '../../../src/molecules/Button'
 import View from '@allthings/react-view'
 import { action } from '@storybook/react'
 import Example from '../../Example'

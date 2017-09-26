@@ -2,8 +2,8 @@ import React from 'react'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'
-import NavigationItem from 'ui/organisms/NavigationItem'
-import ThemeProvider from 'ui/behaviour/ThemeProvider'
+import NavigationItem from '../../../src/organisms/NavigationItem'
+import ThemeProvider from '../../../src/behaviour/ThemeProvider'
 
 class NavigationItemStory extends React.Component {
   render() {

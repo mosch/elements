@@ -2,8 +2,8 @@ import React from 'react'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'
-import ColumnLayout from 'ui/layouts/ColumnLayout'
-import Button from 'components/Button'
+import ColumnLayout from '../../../src/layouts/ColumnLayout'
+import Button from '../../../src/molecules/Button'
 
 class ColumnLayoutStory extends React.Component {
   state = {

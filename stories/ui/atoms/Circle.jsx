@@ -2,7 +2,7 @@ import React from 'react'
 import View from '@allthings/react-view'
 import Example from '../../Example'
 import Notes from '../../Notes'
-import Circle from 'ui/atoms/Circle'
+import Circle from '../../../src/atoms/Circle'
 
 class CircleStory extends React.Component {
   render() {

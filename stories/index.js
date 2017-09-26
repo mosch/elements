@@ -30,19 +30,6 @@ import AppBar from './ui/organisms/AppBar'
 
 import ThemeProviderStory from './ui/behaviours/ThemeProvider'
 
-import StandardPost from './ui/pages/Pinboard/StandardPost'
-import ExtendedPost from './ui/pages/Pinboard/ExtendedPost'
-import GreetingPost from './ui/pages/Pinboard/GreetingPost'
-import Comments from './ui/pages/Pinboard/Comments'
-import Attachments from './ui/pages/Pinboard/Attachments'
-import Settings from './ui/pages/Settings/Settings'
-import Onboarding from './ui/pages/WhoIsWho/Onboarding'
-import Profile from './ui/pages/WhoIsWho/Profile'
-import UserList from './ui/pages/WhoIsWho/UserList'
-import AssetList from './ui/pages/Booking/AssetList'
-import Bookings from './ui/pages/Booking/Bookings'
-import Overview from './ui/pages/Booking/Overview'
-
 import ColumnLayout from './ui/layouts/ColumnLayout'
 import AppLayout from './ui/layouts/AppLayout'
 import TitleBar from './ui/organisms/TitleBar'
@@ -89,25 +76,4 @@ storiesOf('4. Templates & Layouts', module)
 storiesOf('5. Behaviours', module).add('ThemeProvider', () => (
   <ThemeProviderStory />
 ))
-
-storiesOf('6. Pages / Booking', module)
-  .addDecorator(createViewportDecorator())
-  .add('Start', () => (<Overview />))
-  .add('List', () => (<AssetList />))
-  .add('Bookings', () => (<Bookings />))
-
-storiesOf('6. Pages / Pinboard', module)
-  .add('Standard post', () => <StandardPost />)
-  .add('Extended post', () => <ExtendedPost />)
-  .add('Greeting post', () => <GreetingPost />)
-  .add('Comments', () => <Comments />)
-  .add('Attachments', () => <Attachments />)
-
-storiesOf('6. Pages / Settings', module)
-  .add('Settings', () => <Settings />)
-
-storiesOf('6. Pages / Who-is-Who', module)
-  .add('Onboarding', () => <Onboarding />)
-  .add('Profile', () => <Profile />)
-  .add('UserList', () => <UserList />)
 
