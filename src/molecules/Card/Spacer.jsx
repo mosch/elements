@@ -1,1 +1,1 @@
-export default from '@allthings/elements/src/atoms/Spacer'
+export default from '../../atoms/Spacer'

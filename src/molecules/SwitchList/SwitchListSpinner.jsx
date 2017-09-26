@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import View from '@allthings/react-view'
-import Spinner from '@allthings/elements/src/atoms/Spinner'
+import Spinner from '../../atoms/Spinner'
 import { css } from 'glamor'
 const styles = {
   spinner: css({

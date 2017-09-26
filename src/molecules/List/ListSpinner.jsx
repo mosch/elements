@@ -1,7 +1,7 @@
 import React from 'react'
 import View from '@allthings/react-view'
-import Spinner from '@allthings/elements/src/atoms/Spinner'
-import Circle from '@allthings/elements/src/atoms/Circle'
+import Spinner from '../../atoms/Spinner'
+import Circle from '../../atoms/Circle'
 
 const ListSpinner = props => (
   <View direction="row" alignH="center">

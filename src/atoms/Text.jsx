@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from 'glamor'
 import View from '@allthings/react-view'
-import Theme from '@allthings/elements/src/behaviour/Theme'
+import Theme from '../behaviour/Theme'
 
 const availableSizes = {
   xs: 10,

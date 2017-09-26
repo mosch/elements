@@ -4,7 +4,7 @@ import View from '@allthings/react-view'
 //import * as Icons from '@allthings/react-icons/src/index'
 import Theme from '../behaviour/Theme'
 
-Icons = {}
+const Icons = {}
 
 /**
  * Icons are used to visually communicate core parts of the product and
