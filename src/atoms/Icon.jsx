@@ -23,9 +23,17 @@ class Icon extends React.Component {
     children: PropTypes.node,
   }
 
+  state = {
+    icon: null,
+  }
+
   static defaultProps = {
     color: 'primary',
     size: 32.5,
+  }
+
+  static contextTypes = {
+    resourcePath: PropTypes.string,
   }
 
   getSize = () => {
@@ -43,10 +51,22 @@ class Icon extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const path =
+      typeof this.context.resourcePath === 'undefined'
+        ? 'https://static.allthings.me/app/prod/'
+        : this.context.resourcePath
+    fetch(
+      `${path}/static/icons/1.0.0/${this.props.name.replace('Icon', '.svg')}`
+    )
+      .then(r => r.text())
+      .then(x => this.setState({ icon: x }))
+  }
+
   render() {
-    const { name, children, color, ...props } = this.props
+    const { children, name, color, ...props } = this.props
+    children && console.warn('Passing children to Icon is deprecated', children)
     const isFilled = name.indexOf('Filled') !== -1
-    const icon = Icons[name]
     const { width, height } = {
       width: this.getSize(),
       height: this.getSize(),
@@ -57,22 +77,16 @@ class Icon extends React.Component {
         {({ colorize }) => (
           <View
             {...props}
-            style={{ width, height }}
+            style={{
+              width: width,
+              height: height,
+              fill: isFilled && colorize(color),
+              stroke: !isFilled && colorize(color),
+            }}
             alignH="center"
             alignV="center"
-          >
-            {icon
-              ? icon({
-                  style: {
-                    width: width,
-                    height: height,
-                    fill: isFilled && colorize(color),
-                    stroke: !isFilled && colorize(color),
-                  },
-                })
-              : 'Icon not found'}
-            {children}
-          </View>
+            dangerouslySetInnerHTML={{ __html: this.state.icon }}
+          />
         )}
       </Theme>
     )

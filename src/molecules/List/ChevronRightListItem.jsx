@@ -23,9 +23,7 @@ function ChevronRightListItem(props) {
       >
         {children}
       </View>
-      <View flex="nogrow">
-        <ChevronRightIcon {...style} />
-      </View>
+      <View flex="nogrow">{/*<ChevronRightIcon {...style} />*/}</View>
     </ListItem>
   )
 }

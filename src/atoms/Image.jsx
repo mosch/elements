@@ -28,6 +28,8 @@ export default class Image extends React.Component {
   }
 
   componentDidMount() {
+    const url =
+      this.context.url || 'static.allthings.me/app/prod/icons/1.0.0/alarm.svg'
     this.loadImage(this.props.src)
   }
 
