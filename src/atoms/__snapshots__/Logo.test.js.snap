@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo renders correctly 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-90no0s,
+[data-css-90no0s] {
+  background-image: url(/static/img/allthings-logo.svg);
+}
+
+<div
+  data-css-4p3ux5=""
+  onClick={undefined}
+  style={
+    Object {
+      "height": "auto",
+      "width": undefined,
+    }
+  }
+>
+  <div
+    alt="Allthings"
+    data-css-4p3ux5=""
+    data-css-90no0s=""
+    height="100%"
+    width="100%"
+  />
+</div>
+`;

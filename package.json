@@ -18,8 +18,8 @@
     "react-motion": "^0.5.1"
   },
   "peerDependencies": {
-    "react": "^15.6.0 || ^16.0.0-beta.5",
-    "react-dom": "^15.3.0 || ^16.0.0-beta.5"
+    "react": "^15.6.0",
+    "react-dom": "^15.3.0"
   },
   "scripts": {
     "start": "start-storybook -s public -p 6006",
@@ -28,7 +28,8 @@
     "build": "NODE_ENV=production babel ./src --ignore *.spec.js --out-dir ./build && yarn build:copy-files",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.11",
@@ -50,13 +51,18 @@
     "cross-env": "^5.0.5",
     "fs-extra": "^4.0.2",
     "html-entities": "^1.2.1",
+    "jest": "^21.2.1",
     "marked": "^0.3.6",
     "path": "^0.12.7",
     "prettier": "1.6.1",
     "react-codemirror": "^1.0.0",
     "react-draggable": "^3.0.3",
     "react-frame-component": "^1.1.1",
+    "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.2",
     "storybook": "^1.0.0"
+  },
+  "jest": {
+    "snapshotSerializers": ["jest-glamor-react"]
   }
 }
