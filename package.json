@@ -1,0 +1,62 @@
+{
+  "name": "@allthings/elements",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/allthings/elements",
+  "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@allthings/colors": "^3.1.1",
+    "@allthings/react-view": "^1.4.0",
+    "@storybook/react": "^3.2.10",
+    "babel-runtime": "^6.26.0",
+    "glamor": "^2.20.40",
+    "kewler": "^1.0.8",
+    "prop-types": "^15.6.0",
+    "react-broadcast": "^0.5.2",
+    "react-media": "^1.6.1",
+    "react-motion": "^0.5.1"
+  },
+  "peerDependencies": {
+    "react": "^15.6.0 || ^16.0.0-beta.5",
+    "react-dom": "^15.3.0 || ^16.0.0-beta.5"
+  },
+  "scripts": {
+    "start": "start-storybook -s public -p 6006",
+    "build:docs": "build-storybook -c .storybook -o docs",
+    "prebuild": "rimraf build",
+    "build": "NODE_ENV=production babel ./src --ignore *.spec.js --out-dir ./build && yarn build:copy-files",
+    "build:copy-files": "babel-node ./scripts/copy-files.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-links": "^3.2.10",
+    "@storybook/react": "^3.2.11",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-add-react-displayname": "^0.0.4",
+    "babel-plugin-react-docgen": "^1.8.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-do-expressions": "^6.22.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "fs-extra": "^4.0.2",
+    "html-entities": "^1.2.1",
+    "marked": "^0.3.6",
+    "path": "^0.12.7",
+    "prettier": "1.6.1",
+    "react-codemirror": "^1.0.0",
+    "react-draggable": "^3.0.3",
+    "react-frame-component": "^1.1.1",
+    "rimraf": "^2.6.2",
+    "storybook": "^1.0.0"
+  }
+}
