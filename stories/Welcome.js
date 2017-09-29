@@ -10,8 +10,7 @@ export default class Welcome extends React.Component {
         </div>
         <h1>What is it about?</h1>
         <p>
-          ELEMENTS is a set of{' '}
-          <strong>carefully crafted, high quality React UI components, </strong>
+          ELEMENTS is a set of <strong>carefully crafted, high quality React UI components, </strong>
           that Allthings uses to build their mobile app.
         </p>
         <p>

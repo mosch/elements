@@ -31,11 +31,9 @@ import TitleBar from './ui/organisms/TitleBar'
 import LogoStory from './ui/atoms/Logo'
 import ChatBubbleStory from './ui/molecules/ChatBubble'
 
-storiesOf('Welcome', module).add('Getting Started', () => (
-  <Welcome showApp={linkTo('LoginButton')} />
-)).add('Themeing', () => (
-  <ThemeProviderStory />
-))
+storiesOf('Welcome', module)
+  .add('Getting Started', () => (<Welcome showApp={linkTo('LoginButton')} />))
+  .add('Theming', () => (<ThemeProviderStory />))
 
 storiesOf('1. Atoms', module)
   .add('Icon', () => <Icon />)
