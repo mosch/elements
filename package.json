@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/allthings/elements",
   "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "@allthings/colors": "^3.1.1",
     "@allthings/react-view": "^1.4.0",
