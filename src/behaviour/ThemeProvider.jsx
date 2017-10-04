@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Broadcast, Subscriber } from 'react-broadcast'
+import { ColorPalette } from '@allthings/colors'
 
 export const THEME_CHANNEL = 'theme'
 
@@ -18,6 +19,13 @@ export default class ThemeProvider extends React.PureComponent {
       textOnBackground: PropTypes.string.isRequired,
     }),
     children: PropTypes.node,
+  }
+
+  static defaultProps = {
+    theme: {
+      primary: ColorPalette.lightBlack,
+      textOnBackground: ColorPalette.text.white,
+    },
   }
 
   static contextTypes = Subscriber.contextTypes
