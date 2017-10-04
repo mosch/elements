@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import Icon from '../atoms/Icon'
 import { css } from 'glamor'
 import View from '@allthings/react-view'
-import { color, colorCode } from 'ui/propTypes/color'
-import { withTheme } from 'ui/behaviour/ThemeProvider'
-import { createMQ } from 'ui/behaviour/Responsive'
+import { color, colorCode } from '../propTypes/color'
+import { withTheme } from '../behaviour/ThemeProvider'
+import { createMQ } from '../behaviour/Responsive'
 
 const box = (background, onClick) =>
   css({

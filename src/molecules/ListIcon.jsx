@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Icon from '../atoms/Icon'
 import Circle from '../atoms/Circle'
 import { color } from '../propTypes/color'
-import { withTheme } from 'ui/behaviour/ThemeProvider'
+import { withTheme } from '../behaviour/ThemeProvider'
 
 class ListIcon extends React.Component {
   static propTypes = {
