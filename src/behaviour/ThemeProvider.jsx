@@ -14,7 +14,8 @@ export default class ThemeProvider extends React.PureComponent {
   static propTypes = {
     root: PropTypes.bool,
     theme: PropTypes.shape({
-      primary: PropTypes.string.isRequired
+      primary: PropTypes.string.isRequired,
+      textOnBackground: PropTypes.string.isRequired,
     }),
     children: PropTypes.node,
   }

@@ -8,6 +8,7 @@ const themes = {
   demo: {
     primary: colorCode('red'),
     text: textColorCode('primary'),
+    textOnBackground: colorCode('white'),
     secondaryText: textColorCode('secondary'),
     titleColor: colorCode('grey'),
     notificationIndicator: colorCode('red'),

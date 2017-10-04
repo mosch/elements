@@ -3,20 +3,20 @@ import PropTypes from 'prop-types'
 import Icon from '../atoms/Icon'
 import Circle from '../atoms/Circle'
 import { color } from '../propTypes/color'
-import { withTheme } from '../behaviour/ThemeProvider'
+import { withTheme } from 'ui/behaviour/ThemeProvider'
 
 class ListIcon extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    color: color,
+    iconColor: color,
     backgroundColor: color,
   }
 
   render() {
-    const { name, backgroundColor, color } = this.props
+    const { name, backgroundColor, iconColor } = this.props
     return (
       <Circle color={backgroundColor} fill height={40} width={40}>
-        <Icon color={color} size="s" name={name} />
+        <Icon color={iconColor} size="s" name={name} />
       </Circle>
     )
   }
@@ -24,7 +24,7 @@ class ListIcon extends React.Component {
 
 const mapThemeToProps = theme => ({
   backgroundColor: theme.primary,
-  color: theme.contrast,
+  iconColor: theme.textOnBackground,
 })
 
 export default withTheme(mapThemeToProps)(ListIcon)
