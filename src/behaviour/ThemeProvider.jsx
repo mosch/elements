@@ -24,7 +24,7 @@ export default class ThemeProvider extends React.PureComponent {
   static defaultProps = {
     theme: {
       primary: ColorPalette.lightBlack,
-      textOnBackground: ColorPalette.text.white,
+      textOnBackground: ColorPalette.white,
     },
   }
 
