@@ -1,6 +1,6 @@
 {
   "name": "@allthings/elements",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "main": "index.js",
   "repository": "https://github.com/allthings/elements",
   "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
@@ -66,7 +66,10 @@
     "storybook": "^1.0.0"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/build/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/"
+    ],
     "snapshotSerializers": [
       "jest-glamor-react"
     ]
