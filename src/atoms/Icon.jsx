@@ -54,7 +54,7 @@ class Icon extends React.Component {
   componentDidMount() {
     const path =
       typeof this.context.resourcePath === 'undefined'
-        ? 'https://static.allthings.me/app/prod/'
+        ? 'https://static.allthings.me/react-icons/production/'
         : this.context.resourcePath
     fetch(
       `${path}/static/icons/1.0.0/${this.props.name.replace('Icon', '.svg')}`
