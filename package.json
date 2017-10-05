@@ -24,6 +24,7 @@
   "scripts": {
     "start": "start-storybook -s public -p 6006",
     "build:docs": "build-storybook -c .storybook -o docs",
+    "create-new-version": "npm version minor && yarn run build && cd build/ && npm publish",
     "prebuild": "rimraf build",
     "build": "NODE_ENV=production babel ./src --ignore *.spec.js --out-dir ./build && yarn build:copy-files",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
