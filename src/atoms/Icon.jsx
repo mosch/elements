@@ -23,7 +23,7 @@ class Icon extends React.Component {
   }
 
   state = {
-    icon: null,
+    icon: typeof Icon[this.props.name] !== 'undefined',
   }
 
   static defaultProps = {
@@ -33,6 +33,9 @@ class Icon extends React.Component {
 
   static contextTypes = {
     resourcePath: PropTypes.string,
+  }
+
+  static icons = {
   }
 
   getSize = () => {
@@ -66,7 +69,10 @@ class Icon extends React.Component {
         )}.svg`
       )
         .then(r => r.text())
-        .then(icon => this.setState({ icon }))
+        .then(icon => {
+          Icon.icons[this.props.name] = icon
+          this.setState({ icon: true })
+        })
     }
   }
 
@@ -91,7 +97,7 @@ class Icon extends React.Component {
             }}
             alignH="center"
             alignV="center"
-            dangerouslySetInnerHTML={{ __html: this.state.icon }}
+            dangerouslySetInnerHTML={{ __html: Icon.icons[name] }}
           />
         )}
       </Theme>

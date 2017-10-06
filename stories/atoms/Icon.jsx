@@ -13,18 +13,18 @@ const Icons = ['servingFilled', 'checkFilled']
 class IconStory extends React.Component {
   render() {
     return (
-      <View>
-        <Notes for={Icon} />
-        <Example>
-          <Icon name="servingFilled" size="l" color="red" />
-        </Example>
-        <h3>List of all Icons</h3>
-        <p>
-          This example uses the <a href="#">ListIcon</a>. Make sure to check it
-          out if you like to display a Icon in a List
-        </p>
-        <Example showCode={false}>
-          <ResourceProvider>
+      <ResourceProvider>
+        <View>
+          <Notes for={Icon} />
+          <Example>
+            <Icon name="servingFilled" size="l" color="red" />
+          </Example>
+          <h3>List of all Icons</h3>
+          <p>
+            This example uses the <a href="#">ListIcon</a>. Make sure to check
+            it out if you like to display a Icon in a List
+          </p>
+          <Example showCode={false}>
             <CardList title="Available Icons">
               {Icons.map(icon => (
                 <ListItem alignV="stretch" key={icon}>
@@ -39,9 +39,9 @@ class IconStory extends React.Component {
                 </ListItem>
               ))}
             </CardList>
-          </ResourceProvider>
-        </Example>
-      </View>
+          </Example>
+        </View>
+      </ResourceProvider>
     )
   }
 }
