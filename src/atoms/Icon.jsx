@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import View from '@allthings/react-view'
-//import * as Icons from '@allthings/react-icons/src/index'
 import Theme from '../behaviour/Theme'
 
 const Icons = {}
@@ -52,20 +51,27 @@ class Icon extends React.Component {
   }
 
   componentDidMount() {
-    const path =
-      typeof this.context.resourcePath === 'undefined'
-        ? 'https://static.allthings.me/react-icons/production/'
-        : this.context.resourcePath
-    fetch(
-      `${path}/static/icons/1.0.0/${this.props.name.replace('Icon', '.svg')}`
-    )
-      .then(r => r.text())
-      .then(x => this.setState({ icon: x }))
+    this.props.children && console.warn('Passing children to Icon is deprecated')
+
+    if (!this.context.resourcePath) {
+      console.warn(
+        'In order to use icons, you need to wrap everything into a ResourceProvider'
+      )
+    } else {
+      fetch(
+        `${this.context
+          .resourcePath}/react-icons/production/${this.props.name.replace(
+          'Icon',
+          ''
+        )}.svg`
+      )
+        .then(r => r.text())
+        .then(icon => this.setState({ icon }))
+    }
   }
 
   render() {
     const { children, name, color, ...props } = this.props
-    children && console.warn('Passing children to Icon is deprecated', children)
     const isFilled = name.indexOf('Filled') !== -1
     const { width, height } = {
       width: this.getSize(),
