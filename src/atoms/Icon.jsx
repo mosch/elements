@@ -35,8 +35,7 @@ class Icon extends React.Component {
     resourcePath: PropTypes.string,
   }
 
-  static icons = {
-  }
+  static icons = {}
 
   getSize = () => {
     switch (this.props.size) {
@@ -54,13 +53,14 @@ class Icon extends React.Component {
   }
 
   componentDidMount() {
-    this.props.children && console.warn('Passing children to Icon is deprecated')
+    this.props.children &&
+      console.warn('Passing children to Icon is deprecated')
 
     if (!this.context.resourcePath) {
       console.warn(
         'In order to use icons, you need to wrap everything into a ResourceProvider'
       )
-    } else {
+    } else if (!this.state.icon) {
       fetch(
         `${this.context
           .resourcePath}/react-icons/production/${this.props.name.replace(
