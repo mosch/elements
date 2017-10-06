@@ -47,6 +47,8 @@ class View extends Component {
       33, 66
     ]),
 
+    onClick: PropTypes.func,
+
     /** @deprecated */
     onRef: PropTypes.func
   }
@@ -114,6 +116,7 @@ class View extends Component {
       flex,
       onRef,
       wrap,
+      onClick,
       ...restProps
     } = this.props
 
@@ -142,6 +145,13 @@ class View extends Component {
           margin: 0,
           minHeight: '100%',
           width: '100%'
+        }
+      }
+
+      if (onClick) {
+        styles = {
+          ...styles,
+          cursor: 'pointer'
         }
       }
     }
