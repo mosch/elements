@@ -53,20 +53,20 @@ class Icon extends React.Component {
   }
 
   componentDidMount() {
-    this.props.children &&
-      console.warn('Passing children to Icon is deprecated')
+    const { children, name } = this.props
+    children && console.warn('Passing children to Icon is deprecated')
 
     if (!this.context.resourcePath) {
       console.warn(
         'In order to use icons, you need to wrap everything into a ResourceProvider'
       )
     } else if (!this.state.icon) {
+      // Transforms from MyIconNameIcon to myIconName
+      const iconName = (name.charAt(0).toLowerCase() + name.substr(1)).replace('Icon', '')
+
       fetch(
         `${this.context
-          .resourcePath}/react-icons/production/${this.props.name.replace(
-          'Icon',
-          ''
-        )}.svg`
+          .resourcePath}/react-icons/production/${iconName}.svg`
       )
         .then(r => r.text())
         .then(icon => {
