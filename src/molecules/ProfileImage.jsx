@@ -27,6 +27,7 @@ const styles = {
 
   image: css({
     width: '100%',
+    height: '100%'
   }),
 }
 
@@ -74,6 +75,7 @@ const ProfileImage = ({
         src={image}
         srcFallback={getDefaultImageUrl(size)}
         {...styles.image}
+        size="contain"
       />
       {children}
     </div>

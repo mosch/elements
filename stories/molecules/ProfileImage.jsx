@@ -10,7 +10,7 @@ class ProfileImageStory extends React.Component {
       <View>
         <Notes for={ProfileImage} />
         <Example>
-          <ProfileImage />
+          <ProfileImage image="https://placeimg.com/100/100/people" />
         </Example>
       </View>
     )
