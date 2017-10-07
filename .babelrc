@@ -10,7 +10,7 @@
           "last 4 Edge versions"
         ]
       },
-      "useBuiltIns": true,
+      "useBuiltIns": true
     }],
     "react"
   ],
@@ -21,6 +21,19 @@
     "transform-object-rest-spread",
     "transform-runtime"
   ],
+   "env": {
+     "development": {
+       "plugins": [
+         [
+           "babel-plugin-react-docgen",
+           {
+             "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
+           }
+         ],
+         "add-react-displayname"
+       ]
+     }
+   }
 }
 
 
