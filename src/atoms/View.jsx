@@ -116,7 +116,6 @@ class View extends Component {
       flex,
       onRef,
       wrap,
-      onClick,
       ...restProps
     } = this.props
 
@@ -148,7 +147,7 @@ class View extends Component {
         }
       }
 
-      if (onClick) {
+      if (restProps.onClick) {
         styles = {
           ...styles,
           cursor: 'pointer'

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from 'glamor'
-import Text from '../atoms/Text'
-import { withTheme } from '../behaviour/ThemeProvider'
-import { color, colorCode } from '../propTypes/color'
+import Text from 'components/Text'
+import { withTheme } from 'ui/behaviour/ThemeProvider'
+import { color, colorCode } from 'ui/propTypes/color'
 
 const baseStyle = {
   position: 'relative',
@@ -98,7 +98,7 @@ class Button extends React.Component {
         {...restProps}
         onClick={this.handleClick}
       >
-        {typeof children === 'string' ? <Text>{children}</Text> : children}
+        {typeof children === 'string' ? <Text color={color}>{children}</Text> : children}
       </button>
     )
   }

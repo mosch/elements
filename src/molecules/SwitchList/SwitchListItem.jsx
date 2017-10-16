@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import View from '@allthings/react-view'
 import { css } from 'glamor'
-import Text from '../../atoms/Text'
-import { ColorPalette } from '@allthings/colors'
+import Text from 'components/Text'
+import { withTheme } from 'ui/behaviour/ThemeProvider'
 
 class SwitchListItem extends React.Component {
   static propTypes = {
@@ -12,6 +12,7 @@ class SwitchListItem extends React.Component {
     isActive: PropTypes.bool,
     onClick: PropTypes.func.isRequired,
     children: PropTypes.node,
+    theme: PropTypes.object.isRequired,
   }
 
   handleClick = () => this.props.onClick(this.props.optionKey)
@@ -23,9 +24,12 @@ class SwitchListItem extends React.Component {
       isActive,
       onClick,
       children,
+      theme,
       ...props
     } = this.props
-    const activeStyle = isActive && { backgroundColor: ColorPalette.text.gray }
+    const activeStyle = isActive && {
+      backgroundColor: theme.primary,
+    }
     return (
       <View
         onClick={this.handleClick}
@@ -34,9 +38,10 @@ class SwitchListItem extends React.Component {
         {...props}
       >
         <Text
+          size="m"
+          color={isActive ? 'textOnBackground' : 'gray'}
           {...css({
             padding: 10,
-            color: isActive ? ColorPalette.white : ColorPalette.text.secondary,
             textAlign: 'center',
           })}
         >
@@ -48,4 +53,4 @@ class SwitchListItem extends React.Component {
   }
 }
 
-export default SwitchListItem
+export default withTheme()(SwitchListItem)

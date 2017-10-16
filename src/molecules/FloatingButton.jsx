@@ -1,14 +1,14 @@
 import React from 'react'
 import Absolute from '../atoms/Absolute'
-import { withTheme } from '../behaviour/ThemeProvider'
+import { withTheme } from 'ui/behaviour/ThemeProvider'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import View from '@allthings/react-view'
 
 class FloatingButton extends React.Component {
   static propTypes = {
-    disabled: PropTypes.bool,
     color: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
     disabledColor: PropTypes.string.isRequired,
   }
 
@@ -16,19 +16,21 @@ class FloatingButton extends React.Component {
     const { color, disabled, disabledColor, ...props } = this.props
     return (
       <View>
-        <View style={{ height: 38 }} />
+        <View style={{ height: 50 }} />
         <Absolute
-          bottom={0}
-          {...css({
-            height: 38,
-            overflow: 'hidden',
-            backgroundColor: disabled ? disabledColor : color,
-            width: '100%',
-          })}
-          flex="flex"
-          direction="row"
           alignH="center"
           alignV="center"
+          bottom={0}
+          direction="row"
+          flex="flex"
+          {...css({
+            backgroundColor: disabled ? disabledColor : color,
+            boxShadow: '0px -2px 10px 0px rgba(0, 0, 0, 0.2)',
+            cursor: 'pointer',
+            height: 50,
+            overflow: 'hidden',
+            width: '100%',
+          })}
           {...props}
         />
       </View>
