@@ -1,0 +1,2 @@
+webpackJsonp([0xc21c1d123662],{"./node_modules/json-loader/index.js!./.cache/json/molecules-chat-bubble.json":function(e,o){e.exports={pathContext:{}}}});
+//# sourceMappingURL=path---molecules-chat-bubble-a0e39f21c11f6a62c5ab.js.map
