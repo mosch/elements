@@ -22,7 +22,7 @@
     "transform-runtime"
   ],
    "env": {
-     "development": {
+     "docs": {
        "plugins": [
          [
            "babel-plugin-react-docgen",
@@ -30,7 +30,7 @@
              "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
            }
          ],
-         "add-react-displayname"
+         "babel-plugin-add-react-displayname"
        ]
      }
    }
