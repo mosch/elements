@@ -8,6 +8,7 @@
     "gatsby-link": "^1.6.17",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.17",
     "glamor": "^2.20.40",
     "gray-percentage": "^2.0.0",
@@ -24,17 +25,16 @@
     "allthings",
     "elements"
   ],
-  "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "prebuild": "rimraf ../docs",
-    "build": "gatsby build",
+    "build": "BABEL_ENV=docs gatsby build --prefix-paths",
     "postbuild": "mv public ../docs",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gh-pages": "^1.0.0",
     "prettier": "^1.6.1",
     "rimraf": "^2.6.2"
   }

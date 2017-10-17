@@ -1,6 +1,9 @@
 module.exports = {
+  pathPrefix: `/elements`,
   siteMetadata: {
     title: `Allthings Elements`,
+    siteUrl: `https://allthings.github.io/elements/`,
+    description: `Elements is a set of carefully crafted, high quality React UI components, that Allthings uses to build their mobile app.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
