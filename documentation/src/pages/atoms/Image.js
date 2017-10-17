@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from '@allthings/elements/atoms/Image'
 import View from '@allthings/elements/atoms/View'
-import { action } from '@storybook/react'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'
 
@@ -14,7 +13,6 @@ class ImageStory extends React.Component {
   style={{width: 225, height: 225}}
   size="cover"
   src={'https://placeimg.com/225/225/people'}
-  onClick={action('primary button')}
 />`}</Example>
         <h3>Broken Image</h3>
         <Example>{`<Image

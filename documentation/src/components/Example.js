@@ -52,7 +52,7 @@ export default class Example extends React.Component {
       .code}</View></ThemeProvider>`
     return (
       <div>
-        <h1>example</h1>
+        <h2>Example</h2>
         <Editor onChange={this.handleChange} code={this.props.children} />
         <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15 }}>
           <JsxParser

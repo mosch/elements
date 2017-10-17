@@ -1,6 +1,5 @@
 import React from 'react'
 import ProfileImage from '@allthings/elements/molecules/ProfileImage'
-import Card from '@allthings/elements/molecules/Card'
 import View from '@allthings/elements/atoms/View'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'
