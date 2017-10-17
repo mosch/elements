@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "dependencies": {
+    "babel-plugin-react-docgen": "^1.8.1",
+    "codemirror": "^5.30.0",
+    "compass-vertical-rhythm": "^1.3.1",
+    "gatsby": "^1.9.45",
+    "gatsby-link": "^1.6.17",
+    "gatsby-plugin-react-helmet": "^1.0.5",
+    "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-transformer-remark": "^1.7.17",
+    "glamor": "^2.20.40",
+    "gray-percentage": "^2.0.0",
+    "marked": "^0.3.6",
+    "prop-types": "^15.6.0",
+    "react-codemirror": "^1.0.0",
+    "react-docgen": "^2.18.0",
+    "react-draggable": "^3.0.3",
+    "react-helmet": "^5.2.0",
+    "react-jsx-parser": "mosch/react-jsx-parser"
+  },
+  "keywords": [
+    "react",
+    "allthings",
+    "elements"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "prebuild": "rimraf ../docs",
+    "build": "gatsby build",
+    "postbuild": "mv public ../docs",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.6.1",
+    "rimraf": "^2.6.2"
+  }
+}
