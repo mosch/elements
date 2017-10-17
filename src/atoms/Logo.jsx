@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Image from './Image'
-import View from '@allthings/react-view'
+import View from '../atoms/View'
 
 class Logo extends React.Component {
   static propTypes = {

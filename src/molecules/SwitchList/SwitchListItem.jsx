@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import View from '@allthings/react-view'
 import { css } from 'glamor'
-import Text from 'components/Text'
-import { withTheme } from 'ui/behaviour/ThemeProvider'
+import Text from '../../atoms/Text'
+import { withTheme } from '../../behaviour/ThemeProvider'
 
 class SwitchListItem extends React.Component {
   static propTypes = {

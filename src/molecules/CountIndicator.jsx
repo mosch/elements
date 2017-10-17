@@ -23,7 +23,7 @@ class CountIndicator extends React.Component {
 
     return count === 0 ? null : (
       <Absolute {...props}>
-        <Circle color="notificationIndicator" radius={18}>
+        <Circle color="red" radius={18}>
           <Text size="xs" color="white">
             {count > 9 ? '9+' : count}
           </Text>

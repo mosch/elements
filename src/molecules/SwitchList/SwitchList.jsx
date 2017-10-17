@@ -44,11 +44,8 @@ export default class SwitchList extends React.Component {
     showSpinner: PropTypes.bool,
   }
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: this.props.initialActive,
-    }
+  state = {
+    active: this.props.initialActive,
   }
 
   handleClick = optionKey => {

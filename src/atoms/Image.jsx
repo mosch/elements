@@ -13,13 +13,13 @@ export default class Image extends React.Component {
   static propTypes = {
     /** Alternative image to use */
     alt: PropTypes.string,
-    /** Will be called when the image is clicked **/
+    /** Will be called when the image is clicked */
     onClick: PropTypes.func,
-    /** The URL of the image **/
+    /** The URL of the image */
     src: PropTypes.string.isRequired,
-    /** The URL of the fallback image **/
+    /** The URL of the fallback image */
     srcFallback: PropTypes.string,
-    /** The Position behavior of image. If passed, image will be rendered as background image. **/
+    /** The Position behavior of image. If passed, image will be rendered as background image. */
     size: PropTypes.oneOf(['contain', 'cover']),
   }
 

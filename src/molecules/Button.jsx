@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from 'glamor'
-import Text from 'components/Text'
-import { withTheme } from 'ui/behaviour/ThemeProvider'
-import { color, colorCode } from 'ui/propTypes/color'
+import Text from '../atoms/Text'
+import { withTheme } from '../behaviour/ThemeProvider'
+import { color, colorCode } from '../propTypes/color'
 
 const baseStyle = {
   position: 'relative',

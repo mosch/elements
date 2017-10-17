@@ -10,6 +10,8 @@ const Icons = {}
  * available actions. They can act as wayfinding tools to help users more
  * easily understand where they are in the product, and common interaction
  * patterns that are available.
+ *
+ * *Note:* To use Icons, you need to wrap everything in a **ResourceProvider**
  */
 class Icon extends React.Component {
   static propTypes = {

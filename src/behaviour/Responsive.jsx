@@ -26,15 +26,15 @@ const displayStyle = mq =>
 
 export default class Responsive extends React.Component {
   static propTypes = {
-    /** Children to be displayed when component matches screen size(s) **/
+    /** Children to be displayed when component matches screen size(s) */
     children: PropTypes.node.isRequired,
-    /** Whether the component should be displayed on mobile or not **/
+    /** Whether the component should be displayed on mobile or not */
     mobile: PropTypes.bool,
-    /** Whether the component should be displayed on tablet or not **/
+    /** Whether the component should be displayed on tablet or not */
     tablet: PropTypes.bool,
-    /** Whether the component should be displayed on desktop or not **/
+    /** Whether the component should be displayed on desktop or not */
     desktop: PropTypes.bool,
-    /** Ensures that the children will only be rendered on a match, if false it will be hidden by CSS (but still be rendered) **/
+    /** Ensures that the children will only be rendered on a match, if false it will be hidden by CSS (but still be rendered) */
     onlyRenderOnMatch: PropTypes.bool,
   }
 
