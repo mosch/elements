@@ -10,13 +10,9 @@ class SpinnerStory extends React.Component {
     return (
       <View>
         <Notes for={Spinner} />
-        <Example>{`
-          <Spinner />
-        `}</Example>
+        <Example>{`<Spinner />`}</Example>
         <Notes for={ListSpinner} />
-        <Example>{`
-          <ListSpinner />
-        `}</Example>
+        <Example>{`<ListSpinner />`}</Example>
       </View>
     )
   }
