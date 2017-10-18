@@ -7,6 +7,8 @@ import Image from '@allthings/elements/atoms/Image'
 import Logo from '@allthings/elements/atoms/Logo'
 import Text from '@allthings/elements/atoms/Text'
 import Spinner from '@allthings/elements/atoms/Spinner'
+import Inset from '@allthings/elements/atoms/Inset'
+import ListIcon from '@allthings/elements/molecules/ListIcon'
 import ListSpinner from '@allthings/elements/molecules/List/ListSpinner'
 import {
   List,
@@ -33,6 +35,8 @@ import SquareIconButton from '@allthings/elements/molecules/SquareIconButton'
 import Circle from '@allthings/elements/atoms/Circle'
 import ThemeProvider from '@allthings/elements/behaviour/ThemeProvider'
 import ResourceProvider from '@allthings/elements/behaviour/ResourceProvider'
+import SimpleLayout from '@allthings/elements/layouts/SimpleLayout'
+
 import Editor from './Editor'
 import JsxParser from 'react-jsx-parser'
 
@@ -51,7 +55,7 @@ export default class Example extends React.Component {
     const code = `<ThemeProvider><View>${this.state
       .code}</View></ThemeProvider>`
     return (
-      <div>
+      <div style={{marginBottom: '25px'}}>
         <h2>Example</h2>
         <Editor onChange={this.handleChange} code={this.props.children} />
         <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15 }}>
@@ -78,8 +82,10 @@ export default class Example extends React.Component {
               Slider,
               Absolute,
               Logo,
+              Inset,
               Spinner,
               ListSpinner,
+              ListIcon,
               ChatBubble,
               CountIndicator,
               Circle,
@@ -87,6 +93,7 @@ export default class Example extends React.Component {
               SquareIconButton,
               ThemeProvider,
               TitleBar,
+              SimpleLayout
             }}
             jsx={code}
           />

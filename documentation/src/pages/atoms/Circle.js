@@ -8,11 +8,16 @@ export default () => (
     <Notes for={Circle} />
     <Example>
       {`<ThemeProvider>
-  <View direction="row" alignV="center">
-    <Circle color="primary" />
-    <Circle color="#bada55" radius={20} />
-    <Circle color="gray" radius={10} />
-  </View>
+  <ResourceProvider>
+    <View direction="row" alignV="center">
+      <Circle outline fill={false} outlineColor="lightGrey">
+        <Icon size="s" name="remove-filled" color="lightGrey" />
+      </Circle>
+      <Circle color="primary" />
+      <Circle color="#bada55" radius={20} />
+      <Circle color="gray" radius={10} />
+    </View>
+  </ResourceProvider>
 </ThemeProvider>
         `}
     </Example>

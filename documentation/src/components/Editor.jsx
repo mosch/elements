@@ -34,6 +34,7 @@ const Editor = ({ code, mode = 'jsx', ...props }) => (
         viewportMargin: Infinity,
         theme: 'material',
       }}
+      {...props}
     />
   </div>
 )
