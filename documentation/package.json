@@ -18,7 +18,8 @@
     "react-docgen": "^2.18.0",
     "react-draggable": "^3.0.3",
     "react-helmet": "^5.2.0",
-    "react-jsx-parser": "mosch/react-jsx-parser"
+    "react-jsx-parser": "mosch/react-jsx-parser",
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "keywords": [
     "react",
@@ -29,7 +30,7 @@
     "prebuild": "rimraf ../docs",
     "build": "BABEL_ENV=docs gatsby build --prefix-paths",
     "postbuild": "mv public ../docs",
-    "develop": "gatsby develop",
+    "develop": "BABEL_ENV=docs gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

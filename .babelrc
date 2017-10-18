@@ -14,6 +14,19 @@
     }],
     "react"
   ],
+   "env": {
+     "docs": {
+       "plugins": [
+         "add-react-displayname",
+         [
+           "babel-plugin-react-docgen",
+           {
+             "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
+           }
+         ]
+       ]
+     }
+   },
   "plugins": [
     "transform-class-properties",
     "transform-export-extensions",
@@ -21,19 +34,6 @@
     "transform-object-rest-spread",
     "transform-runtime"
   ],
-   "env": {
-     "docs": {
-       "plugins": [
-         [
-           "babel-plugin-react-docgen",
-           {
-             "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
-           }
-         ],
-         "babel-plugin-add-react-displayname"
-       ]
-     }
-   }
 }
 
 
