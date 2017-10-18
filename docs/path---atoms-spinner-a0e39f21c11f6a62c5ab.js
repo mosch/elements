@@ -1,2 +1,1 @@
 webpackJsonp([0xa0e41e37789c],{"./node_modules/json-loader/index.js!./.cache/json/atoms-spinner.json":function(e,n){e.exports={pathContext:{}}}});
-//# sourceMappingURL=path---atoms-spinner-a0e39f21c11f6a62c5ab.js.map
