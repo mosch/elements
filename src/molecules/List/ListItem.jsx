@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from 'glamor'
 import { ColorPalette } from '@allthings/colors'
-import { View } from '@allthings/react-view'
+import View from '../../atoms/View'
 
 const styles = (backgroundColor, withCursor, hideLine) =>
   css({

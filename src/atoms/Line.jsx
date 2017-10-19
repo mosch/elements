@@ -1,5 +1,5 @@
 import React from 'react'
-import View from '@allthings/react-view'
+import View from '../atoms/View'
 import { css } from 'glamor'
 import { color, colorCode } from '../propTypes/color'
 

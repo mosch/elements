@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { css, merge } from 'glamor'
-import { View } from '@allthings/react-view'
+import View from '../../atoms/View'
 import { ColorPalette } from '@allthings/colors'
 import ListItem from './ListItem'
 //import ChevronRightIcon from '@allthings/react-ionicons/lib/ChevronRightIcon'

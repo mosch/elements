@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
-import View from '@allthings/react-view'
+import View from '../atoms/View'
 import { colorCode } from '../propTypes/color'
 import { withTheme } from '../behaviour/ThemeProvider'
 

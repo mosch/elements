@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import json2mq from 'json2mq'
 import { css } from 'glamor'
 import Media from 'react-media'
-import View from '@allthings/react-view'
+import View from '../atoms/View'
 
 const MQ = {
   mobile: { maxWidth: 640 },

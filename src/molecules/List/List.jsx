@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { View } from '@allthings/react-view'
+import View from '../../atoms/View'
 
 /**
  * Lists display a series of related content.

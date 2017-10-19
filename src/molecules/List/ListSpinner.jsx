@@ -1,5 +1,5 @@
 import React from 'react'
-import View from '@allthings/react-view'
+import View from '../../atoms/View'
 import Spinner from '../../atoms/Spinner'
 import Circle from '../../atoms/Circle'
 

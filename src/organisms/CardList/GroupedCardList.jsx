@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CardList from './CardList'
-import View from '@allthings/react-view'
+import View from '../../atoms/View'
 import GroupTitle from '../../atoms/GroupTitle'
 
 const GroupedCardList = ({ title, children, ...rest }) => {

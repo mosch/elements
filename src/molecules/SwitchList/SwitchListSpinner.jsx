@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import View from '@allthings/react-view'
+import View from '../../atoms/View'
 import Spinner from '../../atoms/Spinner'
 import { css } from 'glamor'
 const styles = {

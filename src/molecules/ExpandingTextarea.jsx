@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from 'glamor'
-import { View } from '@allthings/react-view'
+import View from '../atoms/View'
 
 const styles = {
   textarea: css({

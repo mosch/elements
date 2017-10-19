@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import View from '@allthings/react-view'
+import View from '../atoms/View'
 import Theme from '../behaviour/Theme'
 
 export const Icons = [
