@@ -7,8 +7,8 @@ const fs = require(`fs`)
 exports.modifyWebpackConfig = ({ config, stage }) => {
   if (process.env.NODE_ENV === 'production') {
     config.merge({
-      //devtool: false,
-      //debug: false
+      devtool: false,
+      debug: false
     })
   }
   if (stage === 'build-html') {
