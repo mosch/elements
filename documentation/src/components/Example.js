@@ -10,6 +10,7 @@ import Spinner from '@allthings/elements/atoms/Spinner'
 import Inset from '@allthings/elements/atoms/Inset'
 import ListIcon from '@allthings/elements/molecules/ListIcon'
 import ListSpinner from '@allthings/elements/molecules/List/ListSpinner'
+import NotificationBubbleManager from '@allthings/elements/behaviour/NotificationBubbleManager'
 import {
   List,
   ListItem,
@@ -27,6 +28,7 @@ import {
   CardOverlayEditor,
 } from '@allthings/elements/molecules/Card'
 import Button from '@allthings/elements/molecules/Button'
+import NotificationBubble from '@allthings/elements/molecules/NotificationBubble'
 import Slider from '@allthings/elements/molecules/Slider'
 import CountIndicator from '@allthings/elements/molecules/CountIndicator'
 import ChatBubble from '@allthings/elements/molecules/ChatBubble'
@@ -55,7 +57,7 @@ export default class Example extends React.Component {
     const code = `<ThemeProvider><View>${this.state
       .code}</View></ThemeProvider>`
     return (
-      <div style={{marginBottom: '25px'}}>
+      <div style={{marginBottom: '15px'}}>
         <h2>Example</h2>
         <Editor onChange={this.handleChange} code={this.props.children} />
         <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15 }}>
@@ -86,6 +88,8 @@ export default class Example extends React.Component {
               Spinner,
               ListSpinner,
               ListIcon,
+              NotificationBubble,
+              NotificationBubbleManager,
               ChatBubble,
               CountIndicator,
               Circle,
