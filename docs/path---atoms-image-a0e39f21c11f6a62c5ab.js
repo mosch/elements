@@ -1,1 +1,2 @@
 webpackJsonp([0xbb87e80131ac],{"./node_modules/json-loader/index.js!./.cache/json/atoms-image.json":function(o,e){o.exports={pathContext:{}}}});
+//# sourceMappingURL=path---atoms-image-a0e39f21c11f6a62c5ab.js.map

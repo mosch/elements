@@ -1,1 +1,2 @@
 webpackJsonp([89450997894629],{"./node_modules/json-loader/index.js!./.cache/json/test.json":function(t,o){t.exports={data:{markdownRemark:{html:"<h1>Button</h1>\n<p>Its a cool button</p>",frontmatter:{title:""}}},pathContext:{slug:"/test/"}}}});
+//# sourceMappingURL=path---test-bc17d51986abdb99c7b0.js.map

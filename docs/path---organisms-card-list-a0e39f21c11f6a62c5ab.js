@@ -1,1 +1,2 @@
 webpackJsonp([0x7c9bbf3c0d49],{"./node_modules/json-loader/index.js!./.cache/json/organisms-card-list.json":function(o,n){o.exports={pathContext:{}}}});
+//# sourceMappingURL=path---organisms-card-list-a0e39f21c11f6a62c5ab.js.map
