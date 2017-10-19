@@ -1,6 +1,6 @@
 import React from 'react'
 import Absolute from '../atoms/Absolute'
-import { withTheme } from 'ui/behaviour/ThemeProvider'
+import { withTheme } from '../behaviour/ThemeProvider'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import View from '@allthings/react-view'
