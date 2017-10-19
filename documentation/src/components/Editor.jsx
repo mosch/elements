@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import CodeMirror from 'react-codemirror'
 import { css } from 'glamor'
 import Helmet from 'react-helmet'
+import 'codemirror/mode/jsx/jsx';
 
 const styles = {
   code: css({
@@ -13,23 +14,24 @@ const styles = {
   }),
 }
 
-const Editor = ({ code, mode = 'jsx', ...props }) => (
+const Editor = ({ code, mode = 'jsx', options, children, ...props }) => (
   <div {...styles.code}>
     <Helmet>
       <link
         rel="stylesheet"
         type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/codemirror.css"
       />
       <link
         rel="stylesheet"
         type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/theme/material.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/theme/material.css"
       />
     </Helmet>
     <CodeMirror
-      value={code}
+      value={code || children}
       options={{
+        ...options,
         mode,
         viewportMargin: Infinity,
         theme: 'material',
