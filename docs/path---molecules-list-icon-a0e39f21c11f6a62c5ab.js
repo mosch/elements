@@ -1,2 +1,1 @@
 webpackJsonp([0xa61fcea2b710],{"./node_modules/json-loader/index.js!./.cache/json/molecules-list-icon.json":function(o,e){o.exports={pathContext:{}}}});
-//# sourceMappingURL=path---molecules-list-icon-a0e39f21c11f6a62c5ab.js.map
