@@ -161,7 +161,7 @@ export const Icons = [
  *
  * *Note:* To use Icons, you need to wrap everything in a **ResourceProvider**
  */
-class Icon extends React.Component {
+export default class Icon extends React.Component {
   static propTypes = {
     /** The name of the icon */
     name: PropTypes.oneOf(Icons).isRequired,
@@ -239,9 +239,9 @@ class Icon extends React.Component {
   }
 
   render() {
-    const { children, color, ...props } = this.props
-    const name = this.getIconName()
-    const isFilled = name.indexOf('Filled') !== -1
+    const { children, color, name, ...props } = this.props
+    const iconName = this.getIconName()
+    const isFilled = iconName.indexOf('Filled') !== -1
     const { width, height } = {
       width: this.getSize(),
       height: this.getSize(),
@@ -260,12 +260,10 @@ class Icon extends React.Component {
             }}
             alignH="center"
             alignV="center"
-            dangerouslySetInnerHTML={{ __html: Icon.icons[name] }}
+            dangerouslySetInnerHTML={{ __html: Icon.icons[iconName] }}
           />
         )}
       </Theme>
     )
   }
 }
-
-export default Icon
