@@ -1,3 +1,16 @@
 .CodeMirror {
-  height: auto!important;
+  height: auto !important;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-list li {
+  margin-bottom: calc(1.56rem / 6);
+}
+
+.navigation {
+  margin: 0;
+  flex: 0 0 14rem;
 }
