@@ -1,8 +1,6 @@
-<img alt="npm version" src="https://badge.fury.io/js/%40allthings%2Felements.svg"> <img alt="build status" src="https://travis-ci.org/allthings/elements.svg?branch=master">
-
 # [@allthings/elements](https://github.com/allthings/elements)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/allthings/elements.svg)](https://greenkeeper.io/)
+<img alt="npm version" src="https://badge.fury.io/js/%40allthings%2Felements.svg"> <img alt="build status" src="https://travis-ci.org/allthings/elements.svg?branch=master"> [![Greenkeeper badge](https://badges.greenkeeper.io/allthings/elements.svg)](https://greenkeeper.io/)
 
 > Elements is a set of **carefully crafted, high quality React UI components,** that Allthings uses to build their mobile app.
 
