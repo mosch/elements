@@ -2,6 +2,8 @@
 
 # [@allthings/elements](https://github.com/allthings/elements)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/allthings/elements.svg)](https://greenkeeper.io/)
+
 > Elements is a set of **carefully crafted, high quality React UI components,** that Allthings uses to build their mobile app.
 
 ## Installation
