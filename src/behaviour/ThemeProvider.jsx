@@ -5,6 +5,18 @@ import { ColorPalette } from '@allthings/colors'
 
 export const THEME_CHANNEL = 'theme'
 
+export const defaultTheme = {
+  primary: ColorPalette.primary.blue,
+  text: ColorPalette.text.primary,
+  secondaryText: ColorPalette.text.primary,
+  titleColor: ColorPalette.text.primary,
+  contrast: ColorPalette.white,
+  warn: ColorPalette.red,
+  disabled: ColorPalette.grey,
+  background: ColorPalette.background.bright,
+  textOnBackground: ColorPalette.white,
+}
+
 /**
 * All elements support theming by default, and therefore every element must be wrapped inside a ThemeProvider.
 * The ThemeProvider allows you to define the default colors for most elements.
@@ -15,24 +27,21 @@ export default class ThemeProvider extends React.PureComponent {
   static propTypes = {
     root: PropTypes.bool,
     theme: PropTypes.shape({
-      primary: PropTypes.string.isRequired,
-      textOnBackground: PropTypes.string.isRequired,
+      primary: PropTypes.string,
+      text: PropTypes.string,
+      secondaryText: PropTypes.string,
+      titleColor: PropTypes.string,
+      contrast: PropTypes.string,
+      warn: PropTypes.string,
+      disabled: PropTypes.string,
+      background: PropTypes.string,
+      textOnBackground: PropTypes.string,
     }),
     children: PropTypes.node,
   }
 
   static defaultProps = {
-    theme: {
-      primary: ColorPalette.primary.blue,
-      text: ColorPalette.text.primary,
-      secondaryText: ColorPalette.text.primary,
-      titleColor: ColorPalette.text.primary,
-      contrast: ColorPalette.white,
-      warn: ColorPalette.red,
-      disabled: ColorPalette.grey,
-      background: ColorPalette.background.bright,
-      textOnBackground: ColorPalette.white,
-    },
+    theme: defaultTheme,
   }
 
   static contextTypes = Subscriber.contextTypes
@@ -52,7 +61,11 @@ export default class ThemeProvider extends React.PureComponent {
         {previousTheme => (
           <Broadcast
             channel={THEME_CHANNEL}
-            value={{ ...previousTheme, ...theme }}
+            value={{
+              ...ThemeProvider.defaultProps.theme,
+              ...previousTheme,
+              ...theme,
+            }}
           >
             {children}
           </Broadcast>
