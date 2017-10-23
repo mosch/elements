@@ -53,7 +53,13 @@ export default class ThemeProvider extends React.PureComponent {
     }
     const { theme, children } = this.props
     return root ? (
-      <Broadcast channel={THEME_CHANNEL} value={theme}>
+      <Broadcast
+        channel={THEME_CHANNEL}
+        value={{
+          ...ThemeProvider.defaultProps.theme,
+          ...theme,
+        }}
+      >
         {children}
       </Broadcast>
     ) : (
