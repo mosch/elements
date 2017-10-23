@@ -18,7 +18,7 @@ const Header = () => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: '1440px',
+        maxWidth: '1200px',
         padding: '0px 1.0875rem 1.45rem',
         display: 'flex',
         justifyContent: 'space-between',
@@ -65,7 +65,7 @@ const TemplateWrapper = ({ children, data, ...props }) => {
       <div
         style={{
           margin: '0 auto',
-          maxWidth: '1440px',
+          maxWidth: '1200px',
           padding: '0px 1.0875rem 1.45rem',
           paddingTop: 0,
           display: 'flex',
