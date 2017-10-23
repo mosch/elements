@@ -120,7 +120,7 @@ exports[`NotificationBubble renders without error 1`] = `
     data-css-h7582n=""
     style={
       Object {
-        "backgroundColor": "#00bf93",
+        "backgroundColor": "#3598db",
         "bottom": -50,
       }
     }

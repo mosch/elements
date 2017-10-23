@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text renders correctly 1`] = `
-.css-1pf94wl,
-[data-css-1pf94wl] {
+.css-1pkbzrh,
+[data-css-1pkbzrh] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: text;
+  color: #333333;
 }
 
 .css-4p3ux5,
@@ -17,7 +17,7 @@ exports[`Text renders correctly 1`] = `
 }
 
 <div
-  data-css-1pf94wl=""
+  data-css-1pkbzrh=""
   data-css-4p3ux5=""
 />
 `;
