@@ -179,6 +179,8 @@ export default class Icon extends React.Component {
     icon: typeof Icon[this.props.name] !== 'undefined',
   }
 
+  isMounted = false
+
   static defaultProps = {
     color: 'primary',
     size: 32.5,
@@ -217,6 +219,7 @@ export default class Icon extends React.Component {
   }
 
   componentDidMount() {
+    this.isMounted = true
     const { children, name } = this.props
     children && console.warn('Passing children to Icon is deprecated')
 
@@ -233,9 +236,13 @@ export default class Icon extends React.Component {
         .then(r => r.text())
         .then(icon => {
           Icon.icons[iconName] = icon
-          this.setState({ icon: true })
+          this.isMounted && this.setState({ icon: true })
         })
     }
+  }
+
+  componentWillUnmount() {
+    this.isMounted = false
   }
 
   render() {
