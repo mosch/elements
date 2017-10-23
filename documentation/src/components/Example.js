@@ -32,7 +32,9 @@ import NotificationBubble from '@allthings/elements/molecules/NotificationBubble
 import Slider from '@allthings/elements/molecules/Slider'
 import CountIndicator from '@allthings/elements/molecules/CountIndicator'
 import ChatBubble from '@allthings/elements/molecules/ChatBubble'
+import ProfileImage from '@allthings/elements/molecules/ProfileImage'
 import TitleBar from '@allthings/elements/organisms/TitleBar'
+import Hero from '@allthings/elements/organisms/Hero'
 import SquareIconButton from '@allthings/elements/molecules/SquareIconButton'
 import Circle from '@allthings/elements/atoms/Circle'
 import ThemeProvider from '@allthings/elements/behaviour/ThemeProvider'
@@ -74,6 +76,7 @@ export default class Example extends React.Component {
               List,
               ListItem,
               SwitchList,
+              Hero,
               SwitchListItem,
               ChevronRightListItem,
               Icon,
@@ -84,6 +87,7 @@ export default class Example extends React.Component {
               Slider,
               Absolute,
               Logo,
+              ProfileImage,
               Inset,
               Spinner,
               ListSpinner,
