@@ -8,7 +8,7 @@ import Theme from '../behaviour/Theme'
 const CountIndicator = ({ count, ...props }) =>
   count === 0 ? null : (
     <Theme>
-      {({colorize}) => (
+      {({ colorize }) => (
         <Absolute {...props}>
           <Circle color={colorize(props.color)} radius={18}>
             <Text size="xs" color="white">

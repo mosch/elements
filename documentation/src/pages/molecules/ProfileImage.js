@@ -9,12 +9,10 @@ class ProfileImageStory extends React.Component {
     return (
       <View>
         <Notes for={ProfileImage} />
-        <Example>{`
-          <Card>
-            <ProfileImage image="https://placeimg.com/100/100/people" />
-            <ProfileImage />
-          </Card>
-        `}</Example>
+        <Example>{`<Card>
+  <ProfileImage image="https://placeimg.com/100/100/people" />
+  <ProfileImage />
+</Card>`}</Example>
       </View>
     )
   }
