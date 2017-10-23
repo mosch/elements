@@ -17,7 +17,7 @@ class IconStory extends React.Component {
         <ThemeProvider>
         <View>
           <Notes for={Icon} />
-          <Example>{`<Icon name="servingFilled" size="l" color="#bada55" />`}</Example>
+          <Example>{`<Icon name="serving-filled" size="l" color="#bada55" />`}</Example>
           <h3>List of all Icons</h3>
           <p>
             This example uses the <a href="#">ListIcon</a>. Make sure to check
