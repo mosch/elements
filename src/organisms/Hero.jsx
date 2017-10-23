@@ -34,12 +34,13 @@ const styles = {
 
 class Hero extends React.Component {
   static propTypes = {
-    /** Callback when title bar is clicked */
-    onClick: PropTypes.func,
-    /** Color of the title bar */
+    /** Color of the hero, will be primary color by default */
     color: PropTypes.string,
-    children: PropTypes.node,
+    /** Text that will be announced with the Hero */
     text: PropTypes.string,
+    /** Additional children, try to avoid */
+    children: PropTypes.node,
+    /** URL to image that will be rendered */
     img: PropTypes.string,
   }
 
@@ -57,10 +58,11 @@ class Hero extends React.Component {
         {...heroStyle(color)}
         {...props}
       >
-        <Inset direction="row" alignH="start">
+        <Inset direction="column" alignH="start">
           <Text color="white" size="l" strong style={{maxWidth: '142px'}}>
             { text }
           </Text>
+          {children}
         </Inset>
         <View {...styles.heroImageContainer}>
           <img {...styles.heroImage} src={img}/>
