@@ -24,7 +24,7 @@
     "path---molecules-list": "path---molecules-list-a0e39f21c11f6a62c5ab.js",
     "path---molecules-button": "path---molecules-button-a0e39f21c11f6a62c5ab.js",
     "path---organisms-title-bar": "path---organisms-title-bar-a0e39f21c11f6a62c5ab.js",
-    "component---src-layouts-index-js": "component---src-layouts-index-js-c1950769a75c16b0c35d.js",
+    "component---src-layouts-index-js": "component---src-layouts-index-js-7ff8788edc88487e92b5.js",
     "component---src-pages-atoms-view-js": "component---src-pages-atoms-view-js-19e9b8c3161f374b4277.js",
     "component---src-pages-atoms-spinner-js": "component---src-pages-atoms-spinner-js-cb8b9703ac82936bfe8d.js",
     "component---src-pages-molecules-slider-js": "component---src-pages-molecules-slider-js-285e04ef728e1f44fd84.js",
@@ -35,7 +35,7 @@
     "path---behaviours-theme-provider": "path---behaviours-theme-provider-a0e39f21c11f6a62c5ab.js",
     "component---src-pages-404-js": "component---src-pages-404-js-52b7ec24af4c36c4564d.js",
     "path---behaviours-resource-provider": "path---behaviours-resource-provider-a0e39f21c11f6a62c5ab.js",
-    "commons": "commons-abc5166db607544d1a33.js",
+    "commons": "commons-c8c9bd5c99a17d03f469.js",
     "component---src-pages-organisms-card-list-js": "component---src-pages-organisms-card-list-js-6f20e634db910531cd85.js",
     "path---atoms-spinner": "path---atoms-spinner-a0e39f21c11f6a62c5ab.js",
     "component---src-pages-molecules-list-js": "component---src-pages-molecules-list-js-00cd00f203d9541a0e5e.js",
@@ -49,7 +49,7 @@
     "path---molecules-chat-bubble": "path---molecules-chat-bubble-a0e39f21c11f6a62c5ab.js",
     "path---molecules-switch-list": "path---molecules-switch-list-a0e39f21c11f6a62c5ab.js",
     "app": [
-      "app-78bfccde202284d0d4b1.js",
+      "app-68b7bc6bef2acf688112.js",
       "build-js-styles.css"
     ],
     "component---src-pages-organisms-title-bar-js": "component---src-pages-organisms-title-bar-js-dad0b9d3ca8bf11233e5.js",
