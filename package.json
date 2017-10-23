@@ -57,7 +57,8 @@
   "jest": {
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/build/"
+      "/build/",
+      "/documentation/"
     ],
     "snapshotSerializers": [
       "jest-glamor-react"
