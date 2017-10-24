@@ -9,35 +9,35 @@
 Elements are available on [npm package](https://www.npmjs.com/package/@allthings/elements).
 
 ```sh
-yarn add @allthings/element
+yarn add @allthings/elements
 ```
 
-Please note that `@allthings/element` are still under heavily development. Things may change a lot unitl we hit 1.0.0.
+Please note that `@allthings/elements` is still under heavily development.
 
 ## Usage
 
 Here is a quick example to get you started, it's all you need:
 
 ```jsx
-import React from 'react';
-import { render } from 'react-dom';
-import Button from '@allthings/elements/molecules/Button';
+import React from 'react'
+import { render } from 'react-dom'
+import Button from '@allthings/elements/molecules/Button'
 
 function App() {
   return (
     <Button>
       Hello World
     </Button>
-  );
+  )
 }
 
-render(<App />, document.querySelector('#app'));
+render(<App />, document.querySelector('#app'))
 ```
 
 ## Examples
 
-Are you looking for an full example project to get started?
-[Check out this](https://github.com/allthings/elements-example).
+Are you looking for a full example project to get started?
+[Check this out](https://github.com/allthings/elements-example).
 
 ## Documentation
 
