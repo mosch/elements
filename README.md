@@ -12,7 +12,7 @@ Elements are available on [npm package](https://www.npmjs.com/package/@allthings
 yarn add @allthings/elements
 ```
 
-Please note that `@allthings/elements` is still under heavily development.
+Please note that `@allthings/elements` is still under heavy development.
 
 ## Usage
 
