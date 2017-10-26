@@ -31,10 +31,10 @@ const styles = {
   heroImageContainer: css({
     width: '150px',
   }),
-  text: css({
-    maxWidth: '142px',
+  textContainer: css({
+    width: '142px',
     [createMQ('tablet', 'desktop')]: {
-      maxWidth: '242px',
+      width: '50%'
     },
   }),
 }
@@ -65,8 +65,8 @@ class Hero extends React.Component {
         {...heroStyle(color)}
         {...props}
       >
-        <Inset direction="column" alignH="start">
-          <Text color="white" size="l" strong {...styles.text}>
+        <Inset direction="column" alignH="start" {...styles.textContainer}>
+          <Text color="white" size="l" strong>
             { text }
           </Text>
           {children}
