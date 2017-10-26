@@ -175,12 +175,6 @@ export default class Icon extends React.Component {
     children: PropTypes.node,
   }
 
-  state = {
-    icon: typeof Icon[this.props.name] !== 'undefined',
-  }
-
-  mounted = false
-
   static defaultProps = {
     color: 'primary',
     size: 32.5,
@@ -207,8 +201,7 @@ export default class Icon extends React.Component {
     }
   }
 
-  getIconName = () => {
-    const { name } = this.props
+  getIconName = name => {
     // Transforms from my-icon-name to myIconName
     let iconName = name.replace(/-([a-z])/g, g => g[1].toUpperCase())
     // Transforms from MyIconNameIcon to myIconName
@@ -218,36 +211,41 @@ export default class Icon extends React.Component {
     )
   }
 
-  componentDidMount() {
-    this.mounted = true
-    const { children, name } = this.props
-    children && console.warn('Passing children to Icon is deprecated')
-
+  loadIcon = name => {
+    const iconName = this.getIconName(name)
     if (!this.context.resourcePath) {
       console.warn(
         'In order to use icons, you need to wrap everything into a ResourceProvider'
       )
-    } else if (!this.state.icon) {
-      const iconName = this.getIconName()
-      const resoucePath = this.context.resourcePath
-      const path = `${resoucePath}/react-icons/production/${iconName}.svg`
+    } else if (!(iconName in Icon.icons)) {
+      const resourcePath = this.context.resourcePath
+      const path = `${resourcePath}/react-icons/production/${iconName}.svg`
 
       fetch(path)
         .then(r => r.text())
         .then(icon => {
           Icon.icons[iconName] = icon
-          this.mounted && this.setState({ icon: true })
+          this.forceUpdate()
         })
     }
   }
 
-  componentWillUnmount() {
-    this.mounted = false
+  componentDidMount() {
+    this.props.children &&
+      console.warn('Passing children to Icon is deprecated')
+
+    this.loadIcon(this.props.name)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.name !== nextProps.name) {
+      this.loadIcon(nextProps.name)
+    }
   }
 
   render() {
     const { children, color, name, ...props } = this.props
-    const iconName = this.getIconName()
+    const iconName = this.getIconName(name)
     const isFilled = iconName.indexOf('Filled') !== -1
     const { width, height } = {
       width: this.getSize(),
