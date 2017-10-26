@@ -186,6 +186,8 @@ export default class Icon extends React.Component {
 
   static icons = {}
 
+  mounted = false
+
   getSize = () => {
     switch (this.props.size) {
       case 'xs':
@@ -225,7 +227,7 @@ export default class Icon extends React.Component {
         .then(r => r.text())
         .then(icon => {
           Icon.icons[iconName] = icon
-          this.forceUpdate()
+          this.mounted && this.forceUpdate()
         })
     }
   }
@@ -234,6 +236,7 @@ export default class Icon extends React.Component {
     this.props.children &&
       console.warn('Passing children to Icon is deprecated')
 
+    this.mounted = true
     this.loadIcon(this.props.name)
   }
 
@@ -241,6 +244,10 @@ export default class Icon extends React.Component {
     if (this.props.name !== nextProps.name) {
       this.loadIcon(nextProps.name)
     }
+  }
+
+  componentWillUnmount() {
+    this.mounted = false
   }
 
   render() {
