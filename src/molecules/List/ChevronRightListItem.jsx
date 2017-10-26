@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { css, merge } from 'glamor'
+import Icon from '../../atoms/Icon'
 import View from '../../atoms/View'
 import { ColorPalette } from '@allthings/colors'
 import ListItem from './ListItem'
-//import ChevronRightIcon from '@allthings/react-ionicons/lib/ChevronRightIcon'
 
 const style = css({
-  fill: ColorPalette.greyIntense,
   width: 12,
   height: 12,
 })
@@ -23,7 +22,7 @@ function ChevronRightListItem(props) {
       >
         {children}
       </View>
-      <View flex="nogrow">{/*<ChevronRightIcon {...style} />*/}</View>
+      <View flex="nogrow"><Icon name="arrow-right" size="xs" color={ColorPalette.greyIntense} {...style} /></View>
     </ListItem>
   )
 }

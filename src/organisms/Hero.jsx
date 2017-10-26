@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import View from '../atoms/View'
+import { createMQ } from '../behaviour/Responsive'
 import { colorCode } from '../propTypes/color'
 import { withTheme } from '../behaviour/ThemeProvider'
 import Inset from '../atoms/Inset'
@@ -29,6 +30,12 @@ const styles = {
   // the flex properties are messed up without a container
   heroImageContainer: css({
     width: '150px',
+  }),
+  textContainer: css({
+    width: '142px',
+    [createMQ('tablet', 'desktop')]: {
+      width: '50%'
+    },
   }),
 }
 
@@ -58,8 +65,8 @@ class Hero extends React.Component {
         {...heroStyle(color)}
         {...props}
       >
-        <Inset direction="column" alignH="start">
-          <Text color="white" size="l" strong style={{maxWidth: '142px'}}>
+        <Inset direction="column" alignH="start" {...styles.textContainer}>
+          <Text color="white" size="l" strong>
             { text }
           </Text>
           {children}
