@@ -8,7 +8,7 @@ export const THEME_CHANNEL = 'theme'
 export const defaultTheme = {
   primary: ColorPalette.primary.blue,
   text: ColorPalette.text.primary,
-  secondaryText: ColorPalette.text.primary,
+  secondaryText: ColorPalette.text.secondary,
   titleColor: ColorPalette.text.primary,
   contrast: ColorPalette.white,
   warn: ColorPalette.red,

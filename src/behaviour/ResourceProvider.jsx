@@ -23,7 +23,7 @@ class ResourceProvider extends React.Component {
 
   static defaultProps = {
     resourcePath: 'https://static.allthings.me',
-    children: null
+    children: null,
   }
 
   render() {

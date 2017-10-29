@@ -60,6 +60,11 @@ const DefaultProfileImage = ({ width, height }) => {
   )
 }
 
+DefaultProfileImage.propTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+}
+
 const ProfileImage = ({
   size = 'medium',
   showBorder = true,

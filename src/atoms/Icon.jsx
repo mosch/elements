@@ -186,6 +186,24 @@ export default class Icon extends React.Component {
 
   static icons = {}
 
+  componentDidMount() {
+    this.props.children &&
+      console.warn('Passing children to Icon is deprecated')
+
+    this.mounted = true
+    this.loadIcon(this.props.name)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.name !== nextProps.name) {
+      this.loadIcon(nextProps.name)
+    }
+  }
+
+  componentWillUnmount() {
+    this.mounted = false
+  }
+
   mounted = false
 
   getSize = () => {
@@ -230,24 +248,6 @@ export default class Icon extends React.Component {
           this.mounted && this.forceUpdate()
         })
     }
-  }
-
-  componentDidMount() {
-    this.props.children &&
-      console.warn('Passing children to Icon is deprecated')
-
-    this.mounted = true
-    this.loadIcon(this.props.name)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.name !== nextProps.name) {
-      this.loadIcon(nextProps.name)
-    }
-  }
-
-  componentWillUnmount() {
-    this.mounted = false
   }
 
   render() {

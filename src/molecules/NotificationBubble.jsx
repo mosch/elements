@@ -29,6 +29,7 @@ const styles = {
 class NotificationBubble extends React.Component {
   static propTypes = {
     color: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
     onTimeout: PropTypes.func.isRequired,
   }
 
@@ -48,6 +49,7 @@ class NotificationBubble extends React.Component {
   handleRest = () => this.state.visible === false && this.props.onTimeout()
 
   render() {
+    // eslint-disable-next-line no-unused-vars
     const { color, ...props } = this.props
     return (
       <Theme>

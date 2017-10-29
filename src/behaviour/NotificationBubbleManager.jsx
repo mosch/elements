@@ -2,6 +2,7 @@ import React from 'react'
 import View from '../atoms/View'
 import mitt from 'mitt'
 import NotificationBubble from '../molecules/NotificationBubble'
+import PropTypes from 'prop-types'
 
 const emitter = mitt()
 
@@ -14,9 +15,9 @@ export const sendWarning = message => send(message, 'warning')
 export const sendInfo = message => send(message, 'info')
 
 class NotificationBubbleManager extends React.Component {
-  static propTypes = {}
-
-  static defaultProps = {}
+  static propTypes = {
+    children: PropTypes.node,
+  }
 
   state = {
     messages: [],
@@ -33,7 +34,7 @@ class NotificationBubbleManager extends React.Component {
   }
 
   handleEvent = (type, message) =>
-    this.setState(({messages}) => ({
+    this.setState(({ messages }) => ({
       messages: [
         ...messages,
         {
@@ -46,8 +47,8 @@ class NotificationBubbleManager extends React.Component {
     }))
 
   handleTimeout = () => {
-    this.setState(({messages}) => ({
-      messages: messages.slice(1)
+    this.setState(({ messages }) => ({
+      messages: messages.slice(1),
     }))
   }
 
@@ -55,7 +56,11 @@ class NotificationBubbleManager extends React.Component {
     const message = this.state.messages[0]
     return (
       <View>
-        {message && <NotificationBubble key={message.id} onTimeout={this.handleTimeout}>{message.text}</NotificationBubble>}
+        {message && (
+          <NotificationBubble key={message.id} onTimeout={this.handleTimeout}>
+            {message.text}
+          </NotificationBubble>
+        )}
         {this.props.children}
       </View>
     )

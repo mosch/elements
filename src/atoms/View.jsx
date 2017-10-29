@@ -19,38 +19,68 @@ class View extends Component {
 
     /** horizontal alignment */
     alignH: PropTypes.oneOf([
-      'none', 'start', 'center', 'end', 'space-around', 'space-between'
+      'none',
+      'start',
+      'center',
+      'end',
+      'space-around',
+      'space-between',
     ]),
 
     /** vertical alignment */
-    alignV: PropTypes.oneOf([
-      'none', 'start', 'center', 'end', 'stretch'
-    ]),
+    alignV: PropTypes.oneOf(['none', 'start', 'center', 'end', 'stretch']),
 
     /** direction */
-    direction: PropTypes.oneOf([
-      'row', 'column'
-    ]),
+    direction: PropTypes.oneOf(['row', 'column']),
 
     /** Passing true, will make the view fill out available space */
     fill: PropTypes.bool,
 
     /** Defining how children will wrap */
     wrap: PropTypes.oneOf([
-      'inherit', 'initial', 'wrap', 'nowrap', 'wrap-reverse'
+      'inherit',
+      'initial',
+      'wrap',
+      'nowrap',
+      'wrap-reverse',
     ]),
 
     /** Flex values, can be 5, 10, 15 ... 100 or 33, 66 */
     flex: PropTypes.oneOf([
-      'none', 'flex', 'nogrow', 'grow', 'initial', 'auto', 'noshrink',
-      5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 95, 90, 100,
-      33, 66
+      'none',
+      'flex',
+      'nogrow',
+      'grow',
+      'initial',
+      'auto',
+      'noshrink',
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      95,
+      90,
+      100,
+      33,
+      66,
     ]),
 
     onClick: PropTypes.func,
 
     /** @deprecated */
-    onRef: PropTypes.func
+    onRef: PropTypes.func,
   }
 
   static defaultProps = {
@@ -58,7 +88,7 @@ class View extends Component {
     alignV: 'stretch',
     fill: false,
     flex: 'none',
-    onRef: _ => _
+    onRef: _ => _,
   }
 
   /**
@@ -66,7 +96,7 @@ class View extends Component {
    * @param {String} alignment
    * @return {String}
    */
-  getCssAlignValue (alignment) {
+  getCssAlignValue(alignment) {
     if (alignment === 'start' || alignment === 'end') {
       return `flex-${alignment}`
     }
@@ -78,7 +108,7 @@ class View extends Component {
    * @param {String|Number} flex
    * @returns {Object}
    */
-  getCssFlexValue (flex) {
+  getCssFlexValue(flex) {
     if (typeof flex === 'number') {
       if (flex === 33) flex = 100 / 3
       if (flex === 66) flex = 200 / 3
@@ -106,7 +136,7 @@ class View extends Component {
     }
   }
 
-  render () {
+  render() {
     const {
       alignH,
       alignV,
@@ -132,7 +162,7 @@ class View extends Component {
         alignItems: this.getCssAlignValue(alignV),
         display: 'flex',
         flexDirection: direction,
-        justifyContent: this.getCssAlignValue(alignH)
+        justifyContent: this.getCssAlignValue(alignH),
       }
 
       if (wrap) styles.flexWrap = wrap
@@ -143,14 +173,14 @@ class View extends Component {
           height: '100%',
           margin: 0,
           minHeight: '100%',
-          width: '100%'
+          width: '100%',
         }
       }
 
       if (restProps.onClick) {
         styles = {
           ...styles,
-          cursor: 'pointer'
+          cursor: 'pointer',
         }
       }
     }

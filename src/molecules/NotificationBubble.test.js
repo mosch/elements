@@ -4,7 +4,7 @@ import NotificationBubble from './NotificationBubble'
 import ThemeProvider from '../behaviour/ThemeProvider'
 import ResourceProvider from '../behaviour/ResourceProvider'
 
-global.fetch = () => Promise.resolve({ text: () => ''})
+global.fetch = () => Promise.resolve({ text: () => '' })
 
 test('NotificationBubble renders without error', () => {
   const tree = renderer

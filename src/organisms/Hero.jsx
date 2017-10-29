@@ -34,7 +34,7 @@ const styles = {
   textContainer: css({
     width: '142px',
     [createMQ('tablet', 'desktop')]: {
-      width: '50%'
+      width: '50%',
     },
   }),
 }
