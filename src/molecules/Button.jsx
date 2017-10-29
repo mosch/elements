@@ -96,6 +96,7 @@ class Button extends React.Component {
         type={type}
         {...allStyles}
         {...restProps}
+        name={restProps.name || type || null}
         onClick={this.handleClick}
       >
         {typeof children === 'string' ? <Text color={color}>{children}</Text> : children}
