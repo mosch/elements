@@ -22,7 +22,7 @@ export default () => (
     <Example>
       {`<ThemeProvider>
     <ResourceProvider>
-        <Icon name="trendingUp" color="red" />
+        <Icon name="trending-up" color="red" />
     </ResourceProvider>
 </ThemeProvider>`}
     </Example>

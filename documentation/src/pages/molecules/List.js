@@ -1,6 +1,5 @@
 import React from 'react'
 import List from '@allthings/elements/molecules/List/List'
-import { Card, CardContent } from '@allthings/elements/molecules/Card'
 import View from '@allthings/elements/atoms/View'
 
 import Example from '../../components/Example'

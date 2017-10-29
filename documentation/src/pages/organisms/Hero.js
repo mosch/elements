@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, Button, View } from '@allthings/elements'
+import { Hero, View } from '@allthings/elements'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'
 

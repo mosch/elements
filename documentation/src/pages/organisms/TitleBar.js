@@ -3,8 +3,6 @@ import View from '@allthings/elements/atoms/View'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'
 import TitleBar from '@allthings/elements/organisms/TitleBar'
-import Text from '@allthings/elements/atoms/Text'
-import SquareIconButton from '@allthings/elements/molecules/SquareIconButton'
 
 class TitleBarStory extends React.Component {
   render() {

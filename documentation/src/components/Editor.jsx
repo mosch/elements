@@ -4,6 +4,7 @@ import CodeMirror from 'react-codemirror'
 import { css } from 'glamor'
 import Helmet from 'react-helmet'
 import 'codemirror/mode/jsx/jsx';
+import 'codemirror/mode/diff/diff';
 
 const styles = {
   code: css({
@@ -14,7 +15,7 @@ const styles = {
   }),
 }
 
-const Editor = ({ code, mode = 'jsx', options, children, ...props }) => (
+const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
   <div {...styles.code}>
     <Helmet>
       <link
@@ -43,7 +44,9 @@ const Editor = ({ code, mode = 'jsx', options, children, ...props }) => (
 
 Editor.propTypes = {
   code: PropTypes.string,
-  mode: PropTypes.oneOf(['javascript', 'jsx']),
+  children: PropTypes.string,
+  mode: PropTypes.oneOf(['javascript', 'jsx', 'diff']),
+  options: PropTypes.object,
 }
 
 export default Editor

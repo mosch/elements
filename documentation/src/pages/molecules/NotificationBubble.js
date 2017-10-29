@@ -8,6 +8,10 @@ import ResourceProvider from '@allthings/elements/behaviour/ResourceProvider'
 import Button from '@allthings/elements/molecules/Button'
 import Editor from '../../components/Editor'
 
+function sendMySuccess() {
+  sendSuccess('Congratulations, you clicked the Button')
+}
+
 export default () => (
   <ThemeProvider>
     <ResourceProvider>
@@ -16,17 +20,17 @@ export default () => (
           <h1>NotificationBubble</h1>
           <p>
             NotificationBubbles are used to inform users about important
-            information, when an action has failed or succeeded. They're a most
+            information, when an action has failed or succeeded. They&apos;re a most
             prominent ways to communicate to merchants. NotificationBubbles are
             always visible and pop up at the bottom of a page.
           </p>
           <h2>Best practices</h2>
           <ul>
             <li>
-              Do use them when you otherwise users won't have any feedback.
+              Do use them when you otherwise users won&apos;t have any feedback.
             </li>
-            <li>Don't use them extensive.</li>
-            <li>Don't use them when no feedback is required.</li>
+            <li>Don&apos;t use them extensive.</li>
+            <li>Don&apos;t use them when no feedback is required.</li>
           </ul>
           <h2>Example</h2>
           <p>
@@ -36,8 +40,7 @@ export default () => (
             to show a Notification.
           </p>
           <Button
-            onClick={() =>
-              sendSuccess('Congratulations, you clicked the Button')}
+            onClick={sendMySuccess}
           >
             Click me!
           </Button>
@@ -60,7 +63,7 @@ const ShowNotification = () => (
     <NotificationBubbleManager>
       Notification will be shown down there
     </NotificationBubbleManager>
-</ResourceProvider>`}</Example>*/}
+</ResourceProvider>`}</Example> */}
         </View>
       </NotificationBubbleManager>
     </ResourceProvider>

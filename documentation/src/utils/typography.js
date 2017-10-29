@@ -1,9 +1,8 @@
 import Typography from "typography"
-import verticalRhythm from 'compass-vertical-rhythm'
 import gray from 'gray-percentage'
 
 const Theme = {
-  title: 'Moraga',
+  title: 'Allthings',
   baseFontSize: '16px',
   baseLineHeight: 1.56,
   googleFonts: [
@@ -25,11 +24,6 @@ const Theme = {
   bodyWeight: 400,
   boldWeight: 700,
   overrideStyles: ({ scale, rhythm }, options) => {
-    const vr = verticalRhythm({
-      baseFontSize: '16px',
-      baseLineHeight: '24.88px',
-    })
-
     const styles = {
       'h1 a,h2 a,h3 a,h4 a,h5 a,h6 a': {
         fontWeight: options.headerWeight,
@@ -50,21 +44,6 @@ const Theme = {
         marginLeft: 0,
         borderLeft: `${rhythm(1 / 4)} solid ${gray(87)}`,
       },
-      // Mobile styles.
-      /**
-      [TABLET_MEDIA_QUERY]: {
-        html: {
-          ...vr.establishBaseline(),
-        },
-        blockquote: {
-          marginLeft: rhythm(-3 / 4),
-          marginRight: 0,
-          paddingLeft: rhythm(1 / 2),
-        },
-        table: {
-          ...scale(-1 / 5),
-        },
-      },**/
     }
 
     return styles

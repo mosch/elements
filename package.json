@@ -28,7 +28,7 @@
     "prepublishOnly": "echo 'To publish this, go to build/ and run 'yarn publish''",
     "test": "jest",
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
-    "lint": "eslint --cache --ext .js,.jsx src/"
+    "lint": "eslint --cache --ext .js,.jsx src/ documentation/src/"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",

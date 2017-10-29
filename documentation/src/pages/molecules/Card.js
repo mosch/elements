@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardButton, CardContent, CardFooter } from '@allthings/elements/molecules/Card'
+import { Card } from '@allthings/elements/molecules/Card'
 import View from '@allthings/elements/atoms/View'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import View from '@allthings/elements/atoms/View'
 import Icon from '@allthings/elements/atoms/Icon'
 import Relative from '@allthings/elements/atoms/Relative'
@@ -9,6 +10,9 @@ import Text from '@allthings/elements/atoms/Text'
 import Spinner from '@allthings/elements/atoms/Spinner'
 import Inset from '@allthings/elements/atoms/Inset'
 import ListIcon from '@allthings/elements/molecules/ListIcon'
+import TextInput from '@allthings/elements/molecules/TextInput'
+import Form from '@allthings/elements/molecules/Form/Form'
+import Checkbox from '@allthings/elements/molecules/Checkbox'
 import ListSpinner from '@allthings/elements/molecules/List/ListSpinner'
 import NotificationBubbleManager from '@allthings/elements/behaviour/NotificationBubbleManager'
 import {
@@ -46,6 +50,8 @@ import JsxParser from 'react-jsx-parser'
 
 export default class Example extends React.Component {
   static propTypes = {
+    bindings: PropTypes.object,
+    children: PropTypes.string.isRequired,
   }
 
   state = {
@@ -86,8 +92,11 @@ export default class Example extends React.Component {
               Relative,
               Slider,
               Absolute,
+              Checkbox,
               Logo,
+              Form,
               ProfileImage,
+              TextInput,
               Inset,
               Spinner,
               ListSpinner,
@@ -101,7 +110,7 @@ export default class Example extends React.Component {
               SquareIconButton,
               ThemeProvider,
               TitleBar,
-              SimpleLayout
+              SimpleLayout,
             }}
             jsx={code}
           />

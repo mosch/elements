@@ -1,14 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class MarkdownPage extends React.Component {
-  static propTypes = {}
-
-  static defaultProps = {}
-
-  constructor(props) {
-    super(props)
+  static propTypes = {
+    data: PropTypes.shape({
+      markdownRemark: PropTypes.object,
+    }).isRequired,
   }
 
+  static defaultProps = {}
 
   render() {
     const post = this.props.data.markdownRemark

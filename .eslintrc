@@ -7,7 +7,8 @@
   ],
   "globals": {
     "React": true,
-    "fetch": false
+    "fetch": false,
+    "graphql": false
   },
   "parser": "babel-eslint",
   "plugins": [
@@ -33,6 +34,7 @@
       "component": true,
       "html": true
     }],
+    "react/display-name": 0,
     "react/no-render-return-value": 0,
     "space-before-function-paren": 0,
     "standard/computed-property-even-spacing": 0,

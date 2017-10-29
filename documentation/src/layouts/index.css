@@ -4,13 +4,27 @@
 
 .navigation-list {
   list-style: none;
+  margin-left: 0;
+  margin-bottom: 1.12rem;
+}
+
+.navigation-list a {
+  color: #333;
+  font-size: 0.8em;
+}
+.navigation-list .active {
+  font-weight: 600;
 }
 
 .navigation-list li {
-  margin-bottom: calc(1.56rem / 6);
+  margin-bottom: 0;
 }
 
 .navigation {
   margin: 0;
   flex: 0 0 14rem;
+}
+
+.navigation header {
+  font-weight: 600;
 }

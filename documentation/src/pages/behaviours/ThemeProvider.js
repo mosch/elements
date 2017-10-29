@@ -1,12 +1,9 @@
 import React from 'react'
-import View from '@allthings/elements/atoms/View'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'
 import Editor from '../../components/Editor'
 
-import ThemeProvider from '@allthings/elements/behaviour/ThemeProvider'
-
-import Button from '@allthings/elements/molecules/Button'
+import { ThemeProvider, View } from '@allthings/elements'
 
 class ThemeProviderStory extends React.Component {
   render() {
@@ -15,7 +12,8 @@ class ThemeProviderStory extends React.Component {
         <Notes for={ThemeProvider} />
         <h3>How themes are provided</h3>
         <p>To get started with theming, first wrap your application in the &lt;ThemeProvider&gt;.</p>
-        <Editor mode="diff" code={`import React from 'react';
+        <Editor
+mode="diff" code={`import React from 'react';
 + import {
 +   ThemeProvider
 + } from '@allthings/elements/behavior/ThemeProvider';
@@ -35,8 +33,8 @@ class ThemeProviderStory extends React.Component {
         <p>
           To make a component themable a higher-order-component (HoC) is
           provided. With this HoC you can wrap your component.<br />
-          <pre>withTheme(Component, [mapThemeToProps], [displayName])</pre>
         </p>
+        <pre>withTheme(Component, [mapThemeToProps], [displayName])</pre>
         <Editor
           code={`import { withTheme } from '@allthings/elements/behaviours/ThemeProvider'`}
         />

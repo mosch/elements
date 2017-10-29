@@ -1,5 +1,4 @@
 import React from 'react'
-import Text from '@allthings/elements/atoms/Text'
 import View from '@allthings/elements/atoms/View'
 import Example from '../../components/Example'
 import Notes from '../../components/Notes'

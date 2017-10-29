@@ -17,7 +17,7 @@ const IndexPage = () => (
     </p>
     <p>Components are crafted for reusability, composiblity and ease of use.</p>
     <p>
-      So it's all about Atoms 👩🏻‍🔬👨🏼‍🔬, Molecules, Organisms and how they
+      So it&apos;s all about Atoms 👩🏻‍🔬👨🏼‍🔬, Molecules, Organisms and how they
       React. 🎉
     </p>
   </div>

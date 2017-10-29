@@ -1,24 +1,5 @@
 import React from 'react'
-import { css } from 'glamor'
 import PropTypes from 'prop-types'
-
-const styles = {
-  wrapper: css({
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    borderRadius: '15px',
-    maxWidth: '100%',
-    background: '#efefef',
-    padding: '35px',
-  }),
-
-  mobileView: css({
-    boxShadow: '0px 0px 6px 0px rgba(0, 0, 0, 0.15)',
-    background: '#f0f2f5',
-    position: 'relative',
-  }),
-}
 
 export default class PropTable extends React.Component {
   static propTypes = {
@@ -42,7 +23,6 @@ export default class PropTable extends React.Component {
 
   render() {
     const accumProps = {}
-    const type = this.props.type
     const { props } = this.props
     if (props) {
       Object.keys(props).forEach(property => {
