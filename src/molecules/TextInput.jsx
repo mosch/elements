@@ -77,12 +77,26 @@ InputError.propTypes = {
 
 class TextInput extends React.Component {
   static propTypes = {
+    /** The default value to put into the component, without making it controlled */
+    defaultValue: PropTypes.string,
+    /** Indicates that this field is required */
     required: PropTypes.bool,
+    /** The name of this input field */
     name: PropTypes.string.isRequired,
+    /** Type, can be: 'tel', 'number', 'text', 'url', 'email' */
     type: PropTypes.oneOf(['tel', 'number', 'text', 'url', 'email']),
+    /** Called, when the users changes something */
     onChange: PropTypes.func,
+    /** The value, makes this component a controlled component */
     value: PropTypes.string,
+    /** Can only be used with type=text. Increase to enable multi-line input */
     lines: PropTypes.number,
+    /** Regular expression to validate against */
+    pattern: PropTypes.string,
+    /** Min number of characters that must be provided */
+    minLength: PropTypes.number,
+    /** Max number of characters that can be provided */
+    maxLength: PropTypes.number,
   }
 
   state = {
@@ -103,13 +117,13 @@ class TextInput extends React.Component {
   }
 
   setInput = input => {
-    this.input = input
     if (input) {
       this.setState({ length: input.value && input.value.length })
       input.addEventListener('invalid', this.handleInvalid)
     } else {
-      input.removeEventListener('invalid', this.handleInvalid)
+      this.input.removeEventListener('invalid', this.handleInvalid)
     }
+    this.input = input
   }
 
   handleChange = e => {
