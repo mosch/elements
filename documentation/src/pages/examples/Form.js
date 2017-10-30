@@ -17,14 +17,21 @@ class FormExample extends React.Component {
         <h1>Forms</h1>
         <p>
           Forms are used to allow the user to submit information to our app. The form component provides a very simple,
-          yet powerful way how to handle forms. You dont need to use it so that the Input components work, however it makes
-          your life simpler.
+          yet powerful way how to handle forms.
+        </p>
+        <p>
+          We are using uncontrolled components to handle forms. The native onSubmit Event gets intercepted and all values
+          are collected and get pass them as second argument to your onSubmit callback.
+        </p>
+        <p style={{fontStyle: 'italic'}}>
+          Note: You don't need to use the From component in order to make the components like TextInput work. You can also use them standalone.
+          To learn more, check out <a href="https://reactjs.org/docs/forms.html#controlled-components">controlled components section</a> in the React docs.
         </p>
         <h2>Getting started with Form</h2>
         <p>
-          <strong>The Form components just does one simple thing:</strong>
-          It adds the data that the user entered into your form as <strong>second parameter</strong> to the onSubmit callback,
-          so you can easily work with it.
+          The Form components just <strong>does one simple thing</strong>:
+          It intercepts the onSubmit Event and collects all data that the user entered and passes it as <strong>second parameter</strong> to the onSubmit callback,
+          so you can work with it.
         </p>
         <h3>Simple example</h3>
         <Editor>{`import { Form, TextInput } from '@allthings/elements'
@@ -44,7 +51,7 @@ class MyForm extends React.Component {
 }`}</Editor>
         <h3>HTML5 Form validation</h3>
         <p>
-          To validate user input, we rely on <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation">HTML5 Form validation</a>. It provides a standardized yet powerful way to validate users input and is supported across all modern browsers.
+          To validate user input, we rely on <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation">HTML5 Form validation</a>. It provides a standardized and powerful way to validate users input and is supported across all modern browsers.
           If you did not use it yet, make sure the read the documentation on <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation">Mozilla.org</a>.
           Also see the <a href="/molecules/TextInput/">TextInput</a> for allowed props.
         </p>
