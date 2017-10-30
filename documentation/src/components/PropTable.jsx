@@ -15,7 +15,7 @@ export default class PropTable extends React.Component {
       case 'bool':
         return 'true, false'
       case 'enum':
-        return e.values.map ? e.values.map(({ value }) => value).join(', ') : ''
+        return e.value.map ? e.value.map(({ value }) => value).join(', ') : ''
       default:
         return ''
     }
@@ -33,17 +33,13 @@ export default class PropTable extends React.Component {
           typeInfo.defaultValue && typeInfo.defaultValue.value
         const propType = typeInfo.type.name
 
-        let values = '-'
-        if (propType === 'enum') {
-        }
-
         accumProps[property] = {
           property,
           propType,
           defaultValue,
           required,
           description,
-          values,
+          value: typeInfo.type.value,
         }
       })
     }
@@ -72,8 +68,11 @@ export default class PropTable extends React.Component {
                 {i.property} {i.required === 'yes' && '(required)'}{' '}
               </td>
               <td>{this.renderType(i)}</td>
-              <td>{i.description}</td>
-              <td>{this.renderValues(i)}</td>
+              <td>
+                {i.description}
+                {i.defaultValue && (<div>{`Default: ${i.defaultValue}`}</div>)}
+                {this.renderValues(i) && (<div>{`Values: ${this.renderValues(i)}`}</div>)}
+               </td>
             </tr>
           ))}
         </tbody>
