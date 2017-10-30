@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Logo from '../components/Logo.svg'
 import Navigation from '../components/Navigation'
+import ElementsNavigation from '../components/ElementsNavigation'
+import NavigationItems from '../config/Navigation.json'
 import { pathPrefix } from '../../gatsby-config'
 
 import './index.css'
@@ -90,7 +92,12 @@ const TemplateWrapper = ({ children, data, ...props }) => {
           alignContent: 'stretch',
         }}
       >
-        {data.allSitePage && <Navigation items={data.allSitePage.edges} />}
+        <div style={{ minWidth: '230px' }}>
+          {<Navigation items={NavigationItems} />}
+          {data.allSitePage && (
+            <ElementsNavigation items={data.allSitePage.edges} />
+          )}
+        </div>
         <div style={{ overflow: 'hidden', flex: '1 1 auto' }}>{children()}</div>
       </div>
     </div>

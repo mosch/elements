@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Getting started",
+    "link": "/",
+    "items": [
+      {
+        "title": "Welcome",
+        "link": "/"
+      },
+      {
+        "title": "Forms",
+        "link": "/examples/form"
+      },
+      {
+        "title": "Themes and styling",
+        "link": "/behaviours/ThemeProvider/"
+      },
+      {
+        "title": "Using Resouces",
+        "link": "/behaviours/ResourceProvider/"
+      }
+    ]
+  }
+]
