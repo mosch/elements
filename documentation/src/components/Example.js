@@ -62,8 +62,8 @@ export default class Example extends React.Component {
   handleError = error => this.setState({ error })
 
   render() {
-    const code = `<ThemeProvider><View>${this.state
-      .code}</View></ThemeProvider>`
+    const code = `<ThemeProvider><ResourceProvider><View>${this.state
+      .code}</View></ResourceProvider></ThemeProvider>`
     return (
       <div style={{marginBottom: '15px'}}>
         <h2>Example</h2>
