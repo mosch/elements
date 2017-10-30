@@ -1,1 +1,1 @@
-webpackJsonp([52538698524977],{"./node_modules/json-loader/index.js!./.cache/json/atoms-text.json":function(o,e){o.exports={pathContext:{}}}});
+webpackJsonp([52538698524977],{579:function(t,n){t.exports={pathContext:{}}}});

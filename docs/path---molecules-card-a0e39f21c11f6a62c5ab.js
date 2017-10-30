@@ -1,1 +1,1 @@
-webpackJsonp([0xe4a3e704e0f4],{"./node_modules/json-loader/index.js!./.cache/json/molecules-card.json":function(e,o){e.exports={pathContext:{}}}});
+webpackJsonp([0xe4a3e704e0f4],{587:function(e,t){e.exports={pathContext:{}}}});

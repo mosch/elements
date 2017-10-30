@@ -1,1 +1,1 @@
-webpackJsonp([0xd129e3a10bd1],{"./node_modules/json-loader/index.js!./.cache/json/molecules-switch-list.json":function(e,o){e.exports={pathContext:{}}}});
+webpackJsonp([0xd129e3a10bd1],{596:function(t,e){t.exports={pathContext:{}}}});

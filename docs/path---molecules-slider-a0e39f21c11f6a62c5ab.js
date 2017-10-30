@@ -1,1 +1,1 @@
-webpackJsonp([35117787497223],{"./node_modules/json-loader/index.js!./.cache/json/molecules-slider.json":function(e,o){e.exports={pathContext:{}}}});
+webpackJsonp([35117787497223],{594:function(t,n){t.exports={pathContext:{}}}});

@@ -1,1 +1,1 @@
-webpackJsonp([0x7f6f60346012],{"./node_modules/json-loader/index.js!./.cache/json/atoms-logo.json":function(o,n){o.exports={pathContext:{}}}});
+webpackJsonp([0x7f6f60346012],{577:function(t,n){t.exports={pathContext:{}}}});

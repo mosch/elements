@@ -1,1 +1,1 @@
-webpackJsonp([0xc21c1d123662],{"./node_modules/json-loader/index.js!./.cache/json/molecules-chat-bubble.json":function(e,o){e.exports={pathContext:{}}}});
+webpackJsonp([0xc21c1d123662],{588:function(t,c){t.exports={pathContext:{}}}});
