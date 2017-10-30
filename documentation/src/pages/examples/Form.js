@@ -24,7 +24,7 @@ class FormExample extends React.Component {
           are collected and get pass them as second argument to your onSubmit callback.
         </p>
         <p style={{fontStyle: 'italic'}}>
-          Note: You don't need to use the From component in order to make the components like TextInput work. You can also use them standalone.
+          Note: You don&apos;t need to use the From component in order to make the components like TextInput work. You can also use them standalone.
           To learn more, check out <a href="https://reactjs.org/docs/forms.html#controlled-components">controlled components section</a> in the React docs.
         </p>
         <h2>Getting started with Form</h2>
