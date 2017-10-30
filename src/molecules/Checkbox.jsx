@@ -11,13 +11,13 @@ import Absolute from '../atoms/Absolute'
 import Inset from '../atoms/Inset'
 
 const styles = {
-  checkbox: background =>
+  checkbox: (background, checked) =>
     css({
       borderRadius: '3px',
       height: '25px',
       width: '25px',
-      backgroundColor: background,
-      border: 0,
+      backgroundColor: checked && background,
+      border: checked ? 0 : '3px solid lightGrey',
     }),
   text: css({
     width: 200,
@@ -52,7 +52,10 @@ class Checkbox extends React.Component {
         {({ theme, colorize }) => (
           <ListItem>
             <View direction="row" alignV="center">
-              <Relative focusable={false} {...styles.checkbox(theme.primary)}>
+              <Relative
+                focusable={false}
+                {...styles.checkbox(theme.primary, realChecked)}
+              >
                 <Absolute top={1} left={5}>
                   <Icon
                     name="check-filled"
