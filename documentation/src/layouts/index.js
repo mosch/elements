@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation'
 import ElementsNavigation from '../components/ElementsNavigation'
 import NavigationItems from '../config/Navigation.json'
 import { pathPrefix } from '../../gatsby-config'
+import GithubLogo from '../../static/img/GitHub-Mark-32px.png';
 
 import './index.css'
 
@@ -36,7 +37,7 @@ const Header = () => (
         }}
       >
         <img
-          src="/img/GitHub-Mark-120px-plus.png"
+          src={GithubLogo}
           style={{ height: '20px', width: '20px', margin: 0 }}
         />
       </a>
