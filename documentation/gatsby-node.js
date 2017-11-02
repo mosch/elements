@@ -95,7 +95,6 @@ exports.onCreateNode = async ({ node, getNode, boundActionCreators, loadNodeCont
 
   // createReferenceNodes(node, boundActionCreators)
   if (node.internal.mediaType === `text/markdown`) {
-    return
     const content = await loadNodeContent(node)
     createNodeField({
       node,
@@ -108,7 +107,7 @@ exports.onCreateNode = async ({ node, getNode, boundActionCreators, loadNodeCont
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return Promise.all([
-    // createMarkdownPages(graphql, createPage),
+    createMarkdownPages(graphql, createPage),
     // createReactDocs(graphql, createPage),
   ])
 }
