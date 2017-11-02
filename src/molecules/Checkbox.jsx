@@ -11,13 +11,13 @@ import Absolute from '../atoms/Absolute'
 import Inset from '../atoms/Inset'
 
 const styles = {
-  checkbox: background =>
+  checkbox: (background, checked) =>
     css({
       borderRadius: '3px',
       height: '25px',
       width: '25px',
-      backgroundColor: background,
-      border: 0,
+      backgroundColor: checked && background,
+      border: checked ? 0 : '3px solid lightGrey',
     }),
   text: css({
     width: 200,
@@ -31,6 +31,7 @@ class Checkbox extends React.Component {
     checked: PropTypes.bool,
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
+    labelSize: Text.propTypes.size,
   }
 
   state = {
@@ -39,6 +40,7 @@ class Checkbox extends React.Component {
 
   static defaultProps = {
     checked: false,
+    size: 'l',
   }
 
   handleChange = () => this.setState(({ checked }) => ({ checked: !checked }))
@@ -52,7 +54,10 @@ class Checkbox extends React.Component {
         {({ theme, colorize }) => (
           <ListItem>
             <View direction="row" alignV="center">
-              <Relative focusable={false} {...styles.checkbox(theme.primary)}>
+              <Relative
+                focusable={false}
+                {...styles.checkbox(theme.primary, realChecked)}
+              >
                 <Absolute top={1} left={5}>
                   <Icon
                     name="check-filled"
@@ -75,7 +80,7 @@ class Checkbox extends React.Component {
             </View>
             <label htmlFor={this.props.name}>
               <Inset horizontal>
-                <Text size="s">{this.props.label}</Text>
+                <Text size={this.props.labelSize}>{this.props.label}</Text>
               </Inset>
             </label>
           </ListItem>

@@ -5,6 +5,7 @@ import Text from '../atoms/Text'
 import Absolute from '../atoms/Absolute'
 import Theme from '../behaviour/Theme'
 
+/** Indicates changes or updates */
 const CountIndicator = ({ count, ...props }) =>
   count === 0 ? null : (
     <Theme>

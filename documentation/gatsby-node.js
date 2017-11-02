@@ -1,20 +1,22 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-//  .BundleAnalyzerPlugin
 const path = require(`path`)
-const fs = require(`fs`)
+const createReferenceNodes = require('./create-reference-nodes')
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   if (process.env.NODE_ENV === 'production') {
     config.merge({
       devtool: false,
-      debug: false
+      debug: false,
     })
   }
   if (stage === 'build-html') {
-    config.loader('null', {
+    config.loader('null-a', {
       test: /codemirror\/mode/,
-      loader: 'null-loader'
+      loader: 'null-loader',
+    })
+    config.loader('null-b', {
+      test: /webfontloader/,
+      loader: 'null-loader',
     })
   }
   config.merge({
@@ -56,30 +58,57 @@ function createMarkdownPages(graphql, createPage) {
   })
 }
 
-const convertToPath = slug =>
-  slug
-    .replace(/\/$/, '')
-    .replace(/([A-Z])/g, g => `-${g[0].toLowerCase()}`)
-    .replace(/\/\-/g, '/')
-
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+function createReactDocs(graphql, createPage) {
+  return new Promise(async (resolve, reject) => {
+    graphql(`
+      {
+        allFile(filter: { internal: { mediaType: { eq: "text/jsx" } } }) {
+          edges {
+            node {
+              id
+              absolutePath
+              internal {
+                contentDigest
+                mediaType
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allFile.edges.map(async ({ node }) => {})
+      resolve()
+    })
+  })
 }
 
-exports.onCreateNode = async ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-
+exports.onCreateNode = async ({ node, getNode, boundActionCreators, loadNodeContent }) => {
+  const { createNodeField, createNode } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug.slice(0, -1) + '.html',
+    })
+  }
+
+  // createReferenceNodes(node, boundActionCreators)
+  if (node.internal.mediaType === `text/markdown`) {
+    return
+    const content = await loadNodeContent(node)
+    createNodeField({
+      node,
+      name: `content`,
+      value: content,
     })
   }
 }
 
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
-  return Promise.all([createMarkdownPages(graphql, createPage)])
+  return Promise.all([
+    // createMarkdownPages(graphql, createPage),
+    // createReactDocs(graphql, createPage),
+  ])
 }

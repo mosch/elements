@@ -8,6 +8,7 @@ import Image from '@allthings/elements/atoms/Image'
 import Logo from '@allthings/elements/atoms/Logo'
 import Text from '@allthings/elements/atoms/Text'
 import Spinner from '@allthings/elements/atoms/Spinner'
+import Line from '@allthings/elements/atoms/Line'
 import Inset from '@allthings/elements/atoms/Inset'
 import ListIcon from '@allthings/elements/molecules/ListIcon'
 import TextInput from '@allthings/elements/molecules/TextInput'
@@ -62,8 +63,8 @@ export default class Example extends React.Component {
   handleError = error => this.setState({ error })
 
   render() {
-    const code = `<ThemeProvider><View>${this.state
-      .code}</View></ThemeProvider>`
+    const code = `<ThemeProvider><ResourceProvider><View>${this.state
+      .code}</View></ResourceProvider></ThemeProvider>`
     return (
       <div style={{marginBottom: '15px'}}>
         <h2>Example</h2>
@@ -79,6 +80,7 @@ export default class Example extends React.Component {
               CardFooter,
               CardOverlayEditor,
               View,
+              Line,
               List,
               ListItem,
               SwitchList,

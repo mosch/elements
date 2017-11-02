@@ -3,6 +3,16 @@ import React from 'react'
 import { css } from 'glamor'
 import View from '../atoms/View'
 import Theme from '../behaviour/Theme'
+import WebFont from 'webfontloader'
+
+if (typeof window !== `undefined`) {
+  WebFont.load({
+    classes: false,
+    google: {
+      families: ['Open Sans:300,600'],
+    },
+  })
+}
 
 const availableSizes = {
   xs: 10,
@@ -65,6 +75,8 @@ class Text extends React.Component {
       textAlign: align,
       whiteSpace: autoBreak && 'pre-wrap',
       wordBreak: autoBreak && 'break-word',
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale',
     })
 
     return (

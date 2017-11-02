@@ -15,6 +15,15 @@ const styles = {
   }),
 }
 
+const getMode = (mode) => {
+  switch (mode) {
+    case 'js':
+      return 'javascript'
+    default:
+      return mode
+  }
+}
+
 const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
   <div {...styles.code}>
     <Helmet>
@@ -33,7 +42,7 @@ const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
       value={code || children}
       options={{
         ...options,
-        mode,
+        mode: getMode(mode),
         viewportMargin: Infinity,
         theme: 'material',
       }}
@@ -45,7 +54,7 @@ const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
 Editor.propTypes = {
   code: PropTypes.string,
   children: PropTypes.string,
-  mode: PropTypes.oneOf(['javascript', 'jsx', 'diff']),
+  mode: PropTypes.oneOf(['javascript', 'js', 'jsx', 'diff']),
   options: PropTypes.object,
 }
 
