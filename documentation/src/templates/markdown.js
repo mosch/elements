@@ -6,7 +6,7 @@ import frontmatter from 'remark-frontmatter'
 import Editor from '../components/Editor'
 import Example from '../components/Example'
 
-const test = ({ children, className, ...props }) => {
+const code = ({ children, className, ...props }) => {
   if (className === 'language-example') {
     return <Example>{children.join('').trim()}</Example>
   } else {
@@ -15,8 +15,18 @@ const test = ({ children, className, ...props }) => {
   }
 }
 
-const preTest = ({ children, className, ...props }) => {
-  return (<span>{children}</span>)
+code.propTypes = {
+  children: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+}
+
+// hacky fix to remove the prestyled <pre> tag
+const preTest = ({ children, ...props }) => {
+  return <span>{children}</span>
+}
+
+preTest.propTypes = {
+  children: PropTypes.string.isRequired,
 }
 
 class MarkdownPage extends React.Component {
@@ -37,7 +47,7 @@ class MarkdownPage extends React.Component {
             .use(frontmatter, ['yaml', 'toml'])
             .use(reactRenderer, {
               remarkReactComponents: {
-                code: test,
+                code: code,
                 pre: preTest,
               },
               sanitize: false,
@@ -52,7 +62,7 @@ class MarkdownPage extends React.Component {
 export default MarkdownPage
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
+  query MarkdownPageQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       internal {
