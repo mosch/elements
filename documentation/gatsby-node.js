@@ -10,11 +10,11 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     })
   }
   if (stage === 'build-html') {
-    config.loader('null', {
+    config.loader('null-a', {
       test: /codemirror\/mode/,
       loader: 'null-loader',
     })
-    config.loader('null', {
+    config.loader('null-b', {
       test: /webfontloader/,
       loader: 'null-loader',
     })
@@ -85,11 +85,6 @@ function createReactDocs(graphql, createPage) {
 exports.onCreateNode = async ({ node, getNode, boundActionCreators, loadNodeContent }) => {
   const { createNodeField, createNode } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
-    createNodeField({
-      node,
-      name: `content`,
-      value: node.internal.content,
-    })
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
@@ -100,6 +95,7 @@ exports.onCreateNode = async ({ node, getNode, boundActionCreators, loadNodeCont
 
   // createReferenceNodes(node, boundActionCreators)
   if (node.internal.mediaType === `text/markdown`) {
+    return
     const content = await loadNodeContent(node)
     createNodeField({
       node,
@@ -112,7 +108,7 @@ exports.onCreateNode = async ({ node, getNode, boundActionCreators, loadNodeCont
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return Promise.all([
-    createMarkdownPages(graphql, createPage),
+    // createMarkdownPages(graphql, createPage),
     // createReactDocs(graphql, createPage),
   ])
 }

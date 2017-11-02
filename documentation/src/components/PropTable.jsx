@@ -31,7 +31,7 @@ export default class PropTable extends React.Component {
         const description = typeInfo.description
         const defaultValue =
           typeInfo.defaultValue && typeInfo.defaultValue.value
-        const propType = typeInfo.type.name
+        const propType = typeInfo.type && typeInfo.type.name
 
         accumProps[property] = {
           property,
@@ -39,7 +39,7 @@ export default class PropTable extends React.Component {
           defaultValue,
           required,
           description,
-          value: typeInfo.type.value,
+          value: typeInfo.type && typeInfo.type.value,
         }
       })
     }
