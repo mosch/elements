@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Logo from '../components/Logo.svg'
 import Navigation from '../components/Navigation'
 import ElementsNavigation from '../components/ElementsNavigation'
-import NavigationItems from '../config/Navigation.json'
+import NavigationItems from '../config/navigation.yml'
 import { pathPrefix } from '../../gatsby-config'
 import GithubLogo from '../../static/img/GitHub-Mark-32px.png';
 
