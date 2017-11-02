@@ -14,6 +14,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       test: /codemirror\/mode/,
       loader: 'null-loader',
     })
+    config.loader('null', {
+      test: /webfontloader/,
+      loader: 'null-loader',
+    })
   }
   config.merge({
     resolve: {
@@ -41,7 +45,6 @@ function createMarkdownPages(graphql, createPage) {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.map(({ node }) => {
-        console.log('creating page for', node)
         createPage({
           path: node.fields.slug,
           component: path.resolve(`./src/templates/markdown.js`),
