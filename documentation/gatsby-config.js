@@ -13,6 +13,16 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`,
       },
     },
+    /**
+    {
+      resolve: `gatsby-source-github`,
+      options: {
+        name: `developer-docs`,
+        user: `allthings`,
+        repository: `developers`,
+      },
+    },
+    **/
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,6 +30,13 @@ module.exports = {
         path: `${__dirname}/src/docs`,
       },
     },
+    /**{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `source`,
+        path: `${__dirname}/../src`,
+      },
+    },**/
     {
       resolve: `gatsby-transformer-remark`,
     },
