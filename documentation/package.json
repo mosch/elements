@@ -20,6 +20,7 @@
     "react-jsx-parser": "mosch/react-jsx-parser",
     "remark": "^8.0.0",
     "remark-frontmatter": "^1.1.0",
+    "remark-html": "^6.0.1",
     "remark-react": "^4.0.1",
     "webpack-bundle-analyzer": "^2.9.0"
   },

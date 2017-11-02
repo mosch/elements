@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PropTable from './PropTable'
-import marked from 'marked'
+import remark from 'remark'
+import html from 'remark-html'
 import Entities from 'html-entities'
 import Helmet from 'react-helmet'
 
-const entities = new Entities.AllHtmlEntities();
+const entities = new Entities.AllHtmlEntities()
 
 export default class Notes extends React.Component {
   static propTypes = {
@@ -13,9 +14,17 @@ export default class Notes extends React.Component {
     name: PropTypes.string,
   }
 
+  markdownToHtml = markdown => {
+    remark()
+      .use(html)
+      .processSync(markdown)
+  }
+
   render() {
     const component = this.props.for.component || this.props.for
-    const docs = component.__docgenInfo && marked(entities.encode(component.__docgenInfo.description))
+    const docs =
+      component.__docgenInfo &&
+      this.markdownToHtml(entities.encode(component.__docgenInfo.description))
     const props = component.__docgenInfo && component.__docgenInfo.props
     const name = component.displayName || component.name
     return (
