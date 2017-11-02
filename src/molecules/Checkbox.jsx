@@ -31,6 +31,7 @@ class Checkbox extends React.Component {
     checked: PropTypes.bool,
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
+    labelSize: Text.propTypes.size,
   }
 
   state = {
@@ -39,6 +40,7 @@ class Checkbox extends React.Component {
 
   static defaultProps = {
     checked: false,
+    size: 'l',
   }
 
   handleChange = () => this.setState(({ checked }) => ({ checked: !checked }))
@@ -78,7 +80,7 @@ class Checkbox extends React.Component {
             </View>
             <label htmlFor={this.props.name}>
               <Inset horizontal>
-                <Text size="s">{this.props.label}</Text>
+                <Text size={this.props.labelSize}>{this.props.label}</Text>
               </Inset>
             </label>
           </ListItem>
