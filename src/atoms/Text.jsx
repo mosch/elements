@@ -5,12 +5,14 @@ import View from '../atoms/View'
 import Theme from '../behaviour/Theme'
 import WebFont from 'webfontloader'
 
-WebFont.load({
-  classes: false,
-  google: {
-    families: ['Open Sans:300,600'],
-  },
-})
+if (typeof window !== `undefined`) {
+  WebFont.load({
+    classes: false,
+    google: {
+      families: ['Open Sans:300,600'],
+    },
+  })
+}
 
 const availableSizes = {
   xs: 10,
