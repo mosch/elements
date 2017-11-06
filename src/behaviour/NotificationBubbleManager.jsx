@@ -3,6 +3,7 @@ import View from '../atoms/View'
 import mitt from 'mitt'
 import NotificationBubble from '../molecules/NotificationBubble'
 import PropTypes from 'prop-types'
+import Message from './Message'
 
 const emitter = mitt()
 
@@ -17,13 +18,12 @@ export const sendInfo = message => send(message, 'info')
 class NotificationBubbleManager extends React.Component {
   static propTypes = {
     children: PropTypes.node,
+    renderBubble: PropTypes.func,
   }
 
   state = {
     messages: [],
   }
-
-  messageCounter = 0
 
   componentDidMount() {
     emitter.on('*', this.handleEvent)
@@ -35,33 +35,33 @@ class NotificationBubbleManager extends React.Component {
 
   handleEvent = (type, message) =>
     this.setState(({ messages }) => ({
-      messages: [
-        ...messages,
-        {
-          type,
-          id: this.messageCounter++,
-          text: message,
-          date: new Date(),
-        },
-      ],
+      messages: [...messages, new Message(type, message)],
     }))
 
-  handleTimeout = () => {
-    this.setState(({ messages }) => ({
-      messages: messages.slice(1),
-    }))
-  }
+  handleTimeout = () =>
+    this.setState(({ messages }) => ({ messages: messages.slice(1) }))
+
+  renderBubble = message =>
+    this.props.renderBubble ? (
+      this.props.renderBubble({
+        key: message.id,
+        onTimeout: this.handleTimeout,
+        children: message.text,
+      })
+    ) : (
+      <NotificationBubble key={message.id} onTimeout={this.handleTimeout}>
+        {message.text}
+      </NotificationBubble>
+    )
 
   render() {
+    const { children, ...props } = this.props
     const message = this.state.messages[0]
+
     return (
-      <View>
-        {message && (
-          <NotificationBubble key={message.id} onTimeout={this.handleTimeout}>
-            {message.text}
-          </NotificationBubble>
-        )}
-        {this.props.children}
+      <View {...props}>
+        {message && this.renderBubble(message)}
+        {children}
       </View>
     )
   }

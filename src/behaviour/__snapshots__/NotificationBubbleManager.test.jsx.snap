@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotificationBubble renders without error 1`] = `
+exports[`NotificationBubbleManager renders the bubble 1`] = `
 .css-1uw148h,
 [data-css-1uw148h] {
   z-index: 200;
@@ -116,54 +116,62 @@ exports[`NotificationBubble renders without error 1`] = `
 
 <div
   data-css-4p3ux5=""
+  renderBubble={[Function]}
 >
   <div
-    data-css-1uw148h=""
-    data-css-h7582n=""
-    style={
-      Object {
-        "backgroundColor": "#3598db",
-        "bottom": -50,
-      }
-    }
+    data-css-4p3ux5=""
   >
     <div
-      data-css-13ph0e0=""
-      data-css-ms4fmp=""
+      data-css-1uw148h=""
+      data-css-h7582n=""
+      style={
+        Object {
+          "backgroundColor": "#3598db",
+          "bottom": -50,
+        }
+      }
     >
       <div
-        data-css-16gi3pi=""
-        data-css-4p3ux5=""
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        data-css-13ph0e0=""
+        data-css-ms4fmp=""
       >
-        Hello World
+        <div
+          data-css-16gi3pi=""
+          data-css-4p3ux5=""
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          success
+        </div>
+      </div>
+      <div
+        data-css-17pfsf1=""
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          data-css-4p3ux5=""
+          size={32.5}
+          style={
+            Object {
+              "fill": "white",
+              "height": 32.5,
+              "stroke": false,
+              "width": 32.5,
+            }
+          }
+        />
       </div>
     </div>
-    <div
-      data-css-17pfsf1=""
-    >
-      <div
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-        data-css-4p3ux5=""
-        size={32.5}
-        style={
-          Object {
-            "fill": "white",
-            "height": 32.5,
-            "stroke": false,
-            "width": 32.5,
-          }
-        }
-      />
-    </div>
+  </div>
+  <div>
+    Test
   </div>
 </div>
 `;
