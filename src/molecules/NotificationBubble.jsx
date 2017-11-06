@@ -49,8 +49,7 @@ class NotificationBubble extends React.Component {
   handleRest = () => this.state.visible === false && this.props.onTimeout()
 
   render() {
-    // eslint-disable-next-line no-unused-vars
-    const { color, ...props } = this.props
+    const { color, onTimeout, ...props } = this.props
     return (
       <Theme>
         {({ colorize }) => (
@@ -65,10 +64,13 @@ class NotificationBubble extends React.Component {
             }}
           >
             {style => (
-              <View {...styles.container}>
+              <View {...styles.container} {...props}>
                 <View
                   {...styles.bubble}
-                  style={{backgroundColor: colorize(color), bottom: style.position}}
+                  style={{
+                    backgroundColor: colorize(color),
+                    bottom: style.position,
+                  }}
                   direction="row"
                   alignV="center"
                 >

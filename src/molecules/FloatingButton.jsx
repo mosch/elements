@@ -26,7 +26,7 @@ class FloatingButton extends React.Component {
           {...css({
             backgroundColor: disabled ? disabledColor : color,
             boxShadow: '0px -2px 10px 0px rgba(0, 0, 0, 0.2)',
-            cursor: 'pointer',
+            cursor: disabled ? 'default' : 'pointer',
             height: 50,
             overflow: 'hidden',
             width: '100%',
