@@ -79,6 +79,7 @@
     "jsonEnable": []
   },
   "jest": {
+    "rootDir": "../elements",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/build/",
