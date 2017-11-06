@@ -1,10 +1,9 @@
-import React from 'react'
 import Message from './Message'
 
 test('it should increase message counter', () => {
-  expect(Message.messageCount).toBe(0)
-  new Message()
-  new Message()
-  expect(Message.messageCount).toBe(2)
+  const msg1 = new Message()
+  const msg2 = new Message()
+  expect(msg1.id).toBe(0)
+  expect(msg2.id).toBe(1)
 
 })
