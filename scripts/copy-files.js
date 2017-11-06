@@ -46,7 +46,7 @@ function createPackageFile() {
     });
 }
 
-const files = [];
+const files = ['README.md'];
 
 Promise.all(files.map(file => copyFile(file)))
   .then(() => createPackageFile())
