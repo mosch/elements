@@ -9,7 +9,8 @@ import 'codemirror/mode/diff/diff';
 const styles = {
   code: css({
     borderRadius: '6px',
-    marginTop: 20,
+    marginTop: 0,
+    marginBottom: 30,
     padding: 20,
     backgroundColor: '#263238',
   }),
@@ -44,6 +45,8 @@ const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
         ...options,
         mode: getMode(mode),
         viewportMargin: Infinity,
+        styleActiveLine: true,
+        lineNumbers: true,
         theme: 'material',
       }}
       {...props}

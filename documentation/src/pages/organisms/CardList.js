@@ -10,38 +10,39 @@ class CardStory extends React.Component {
     return (
       <View>
         <Notes for={CardList} />
-        <Example>{`<ThemeProvider>
-          <CardList>
-            <ChevronRightListItem>
-              <Text>List item with chevron</Text>
-            </ChevronRightListItem>
-            <ListItem>
-              <Text>Test</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Test</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Test</Text>
-            </ListItem>
-          </CardList>
-          </ThemeProvider>
+        <Example>{`
+<ThemeProvider>
+  <CardList>
+    <ChevronRightListItem>
+      <Text>List item with chevron</Text>
+    </ChevronRightListItem>
+    <ListItem>
+      <Text>Test</Text>
+    </ListItem>
+    <ListItem>
+      <Text>Test</Text>
+    </ListItem>
+    <ListItem>
+      <Text>Test</Text>
+    </ListItem>
+  </CardList>
+</ThemeProvider>
         `}</Example>
         <Notes for={GroupedCardList} />
         <Example>{`
 <ThemeProvider>
-          <GroupedCardList title="Group Card List">
-            <ListItem>
-              <Text>Test</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Test</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Test</Text>
-            </ListItem>
-          </GroupedCardList>
-          </ThemeProvider>
+<GroupedCardList title="Group Card List">
+  <ListItem>
+    <Text>Test</Text>
+  </ListItem>
+  <ListItem>
+    <Text>Test</Text>
+  </ListItem>
+  <ListItem>
+    <Text>Test</Text>
+  </ListItem>
+</GroupedCardList>
+</ThemeProvider>
         `}</Example>
       </View>
     )

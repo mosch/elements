@@ -23,20 +23,22 @@ class IconStory extends React.Component {
             This example uses the <a href="#">ListIcon</a>. Make sure to check
             it out if you like to display a Icon in a List
           </p>
-          <CardList title="Available Icons">
-            {Icons.map(icon => (
-              <ListItem alignV="stretch" key={icon}>
-                <View direction="row" alignH="space-between" flex={40}>
-                  <Icon color="#bada55" name={icon} size="s" />
-                  <Icon color="#bada55" name={icon} size="m" />
-                  <Icon color="#bada55" name={icon} size="l" />
-                </View>
-                <View flex={60} alignH="end">
-                  <Text align="right">{icon}</Text>
-                </View>
-              </ListItem>
-            ))}
-          </CardList>
+          <div style={{ backgroundColor: '#F4F4F4', padding: '15px' }}>
+            <CardList title="Available Icons">
+              {Icons.map(icon => (
+                <ListItem alignV="stretch" key={icon}>
+                  <View direction="row" alignH="space-between" flex={40}>
+                    <Icon color="#bada55" name={icon} size="s" />
+                    <Icon color="#bada55" name={icon} size="m" />
+                    <Icon color="#bada55" name={icon} size="l" />
+                  </View>
+                  <View flex={60} alignH="end">
+                    <Text align="right">{icon}</Text>
+                  </View>
+                </ListItem>
+              ))}
+            </CardList>
+          </div>
         </View>
         </ThemeProvider>
       </ResourceProvider>

@@ -67,56 +67,62 @@ export default class Example extends React.Component {
       .code}</View></ResourceProvider></ThemeProvider>`
     return (
       <div style={{marginBottom: '15px'}}>
-        <h2>Example</h2>
-        <Editor onChange={this.handleChange} code={this.props.children} />
-        <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15 }}>
-          <JsxParser
-            bindings={this.props.bindings}
-            onError={this.handleError}
-            components={{
-              Card,
-              CardButton,
-              CardContent,
-              CardFooter,
-              CardOverlayEditor,
-              View,
-              Line,
-              List,
-              ListItem,
-              SwitchList,
-              Hero,
-              SwitchListItem,
-              ChevronRightListItem,
-              Icon,
-              ResourceProvider,
-              Image,
-              Text,
-              Relative,
-              Slider,
-              Absolute,
-              Checkbox,
-              Logo,
-              Form,
-              ProfileImage,
-              TextInput,
-              Inset,
-              Spinner,
-              ListSpinner,
-              ListIcon,
-              NotificationBubble,
-              NotificationBubbleManager,
-              ChatBubble,
-              CountIndicator,
-              Circle,
-              Button,
-              SquareIconButton,
-              ThemeProvider,
-              TitleBar,
-              SimpleLayout,
-            }}
-            jsx={code}
-          />
-          {this.state.error}
+        <h3>Example</h3>
+        <div className="row">
+          <div className="col-lg-7">
+            <Editor onChange={this.handleChange} code={this.props.children} />
+          </div>
+          <div className="col-lg-5">
+              <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15, borderRadius: '6px', position: '-webkit-sticky', position: 'sticky', top: 0 }}>
+                <JsxParser
+                  bindings={this.props.bindings}
+                  onError={this.handleError}
+                  components={{
+                    Card,
+                    CardButton,
+                    CardContent,
+                    CardFooter,
+                    CardOverlayEditor,
+                    View,
+                    Line,
+                    List,
+                    ListItem,
+                    SwitchList,
+                    Hero,
+                    SwitchListItem,
+                    ChevronRightListItem,
+                    Icon,
+                    ResourceProvider,
+                    Image,
+                    Text,
+                    Relative,
+                    Slider,
+                    Absolute,
+                    Checkbox,
+                    Logo,
+                    Form,
+                    ProfileImage,
+                    TextInput,
+                    Inset,
+                    Spinner,
+                    ListSpinner,
+                    ListIcon,
+                    NotificationBubble,
+                    NotificationBubbleManager,
+                    ChatBubble,
+                    CountIndicator,
+                    Circle,
+                    Button,
+                    SquareIconButton,
+                    ThemeProvider,
+                    TitleBar,
+                    SimpleLayout,
+                  }}
+                  jsx={code}
+                />
+                {this.state.error}
+              </div>
+          </div>
         </div>
       </div>
     )

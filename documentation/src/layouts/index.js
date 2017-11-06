@@ -12,20 +12,23 @@ import './index.css'
 
 const Header = () => (
   <div
+    className="container"
     style={{
-      marginBottom: '1.45rem',
-      marginTop: '1.45rem',
+      // marginBottom: '1.45rem',
+      // marginTop: '1.45rem',
     }}
   >
     <div
+      className="row"
       style={{
-        margin: '0 auto',
-        maxWidth: '1200px',
-        padding: '0px 1.0875rem 1.45rem',
+        // margin: '0 auto',
+        // maxWidth: '1200px',
+        padding: '40px 0 2.45rem',
+        marginBottom: 40,
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        flexDirection: 'row',
+        // alignItems: 'flex-end',
+        // flexDirection: 'row',
         borderBottom: '1px solid #EBEBEB',
       }}
     >
@@ -57,6 +60,14 @@ const TemplateWrapper = ({ children, data, ...props }) => {
         ]}
       >
         <link
+          rel="stylesheet"
+          href={`/styles.grid.css`}
+        />
+        <link
+          rel="stylesheet"
+          href={`/styles.css`}
+        />
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${pathPrefix}/apple-touch-icon.png`}
@@ -82,24 +93,27 @@ const TemplateWrapper = ({ children, data, ...props }) => {
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <Header />
+      <div className="container">
       <div
+        className="row"
         style={{
-          margin: '0 auto',
-          maxWidth: '1200px',
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-          display: 'flex',
-          flexDirection: 'row',
-          alignContent: 'stretch',
+          // margin: '0 auto',
+          // maxWidth: '1200px',
+          // padding: '0px 1.0875rem 1.45rem',
+          // paddingTop: 0,
+          // display: 'flex',
+          // flexDirection: 'row',
+          // alignContent: 'stretch',
         }}
       >
-        <div style={{ minWidth: '230px' }}>
+        <div className="col-sm-3 col-lg-2" style={{ paddingLeft:0 }}>
           {<Navigation items={NavigationItems} />}
           {data.allSitePage && (
             <ElementsNavigation items={data.allSitePage.edges} />
           )}
         </div>
-        <div style={{ overflow: 'hidden', flex: '1 1 auto' }}>{children()}</div>
+        <div className="col-sm-9 col-lg-10">{children()}</div>
+      </div>
       </div>
     </div>
   )

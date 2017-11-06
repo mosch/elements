@@ -14,7 +14,7 @@ class ImageStory extends React.Component {
   size="cover"
   src={'https://placeimg.com/225/225/people'}
 />`}</Example>
-        <h3>Broken Image</h3>
+        <h2>Broken Image</h2>
         <Example>{`<Image
   style={{width: 225, height: 225}}
   src={'https://placeimg.com/nothing'}

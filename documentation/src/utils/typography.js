@@ -7,16 +7,12 @@ const Theme = {
   baseLineHeight: 1.56,
   googleFonts: [
     {
-      name: 'Source Sans Pro',
-      styles: ['600'],
-    },
-    {
       name: 'Open Sans',
-      styles: ['200', '400', '400i', '700'],
+      styles: ['200', '400', '400i', '600', '700'],
     },
   ],
   scaleRatio: 2.5,
-  headerFontFamily: ['Source Sans Pro', 'sans-serif'],
+  headerFontFamily: ['Open Sans', 'sans-serif'],
   bodyFontFamily: ['Open Sans', 'sans-serif'],
   headerColor: 'hsla(0,0%,0%,0.85)',
   bodyColor: 'hsla(0,0%,0%,0.7)',
