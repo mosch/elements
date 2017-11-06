@@ -7,6 +7,9 @@ import Editor from '../components/Editor'
 import Example from '../components/Example'
 
 const code = ({ children, className, ...props }) => {
+  if (!className) {
+    return <pre>{children}</pre>
+  }
   if (className === 'language-example') {
     return <Example>{children.join('').trim()}</Example>
   } else {
