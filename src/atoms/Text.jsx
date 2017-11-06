@@ -3,15 +3,15 @@ import React from 'react'
 import { css } from 'glamor'
 import View from '../atoms/View'
 import Theme from '../behaviour/Theme'
-import WebFont from 'webfontloader'
+import neue from 'neue'
 
 if (typeof window !== `undefined`) {
-  WebFont.load({
-    classes: false,
-    google: {
-      families: ['Open Sans:300,600'],
+  neue.load([
+    {
+      families: ['Open Sans:n3,n6'],
+      css: '//fonts.googleapis.com/css?family=Open+Sans:300,600',
     },
-  })
+  ])
 }
 
 const availableSizes = {
