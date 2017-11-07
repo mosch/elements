@@ -6,7 +6,8 @@ import Helmet from 'react-helmet'
 import 'codemirror/mode/jsx/jsx';
 import 'codemirror/mode/diff/diff';
 import 'codemirror/addon/selection/active-line';
-import 'codemirror/addon/edit/matchbrackets.js'
+import 'codemirror/addon/edit/matchbrackets';
+import 'codemirror/addon/edit/closetag';
 
 const styles = {
   code: css({
@@ -50,6 +51,7 @@ const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
         styleActiveLine: true,
         matchBrackets: true,
         lineNumbers: true,
+        autoCloseTags: true,
         theme: 'allthings',
       }}
       {...props}
