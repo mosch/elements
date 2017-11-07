@@ -73,7 +73,7 @@ export default class Example extends React.Component {
             <Editor onChange={this.handleChange} code={this.props.children} />
           </div>
           <div className="col-lg-5">
-              <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15, borderRadius: '6px', position: '-webkit-sticky', position: 'sticky', top: 0 }}>
+              <div style={{ backgroundColor: '#F4F4F4', width: '100%', padding: 15, borderRadius: '6px', {/*position: '-webkit-sticky',*/} position: 'sticky', top: 0 }}>
                 <JsxParser
                   bindings={this.props.bindings}
                   onError={this.handleError}
