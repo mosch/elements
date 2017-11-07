@@ -61,11 +61,11 @@ const TemplateWrapper = ({ children, data, ...props }) => {
       >
         <link
           rel="stylesheet"
-          href={`/styles.grid.css`}
+          href={`/css/styles.grid.css`}
         />
         <link
           rel="stylesheet"
-          href={`/styles.css`}
+          href={`/css/styles.css`}
         />
         <link
           rel="apple-touch-icon"

@@ -36,7 +36,7 @@ const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
       <link
         rel="stylesheet"
         type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/theme/material.css"
+        href="/css/codemirror.theme.allthings.css"
       />
     </Helmet>
     <CodeMirror
@@ -46,8 +46,9 @@ const Editor = ({ code, mode = 'jsx', options = {}, children, ...props }) => (
         mode: getMode(mode),
         viewportMargin: Infinity,
         styleActiveLine: true,
+        matchBrackets: true,
         lineNumbers: true,
-        theme: 'material',
+        theme: 'allthings',
       }}
       {...props}
     />
