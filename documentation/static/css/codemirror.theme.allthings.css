@@ -20,6 +20,7 @@ based on the monokai theme https://codemirror.net/theme/ambiance.css
 
 .cm-s-allthings span.cm-comment { color: #666666; }
 .cm-s-allthings span.cm-atom { color: #ff5500; }
+.cm-s-allthings span.cm-operator { color: #ff5500; }
 .cm-s-allthings span.cm-number { color: #16a086; }
 
 .cm-s-allthings span.cm-property { color: #a6e22e; }
@@ -31,7 +32,7 @@ based on the monokai theme https://codemirror.net/theme/ambiance.css
 .cm-s-allthings span.cm-variable { color: #f8f8f2; }
 .cm-s-allthings span.cm-variable-2 { color: #9effff; }
 .cm-s-allthings span.cm-variable-3, .cm-s-allthings span.cm-type { color: #66d9ef; }
-.cm-s-allthings span.cm-def { color: #96d42a; }
+.cm-s-allthings span.cm-def { color: #00bf93; }
 .cm-s-allthings span.cm-bracket { color: #f8f8f2; }
 .cm-s-allthings span.cm-tag { color: #1cabbb; }
 .cm-s-allthings span.cm-header { color: #ae81ff; }
