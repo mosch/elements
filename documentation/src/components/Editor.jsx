@@ -5,6 +5,8 @@ import { css } from 'glamor'
 import Helmet from 'react-helmet'
 import 'codemirror/mode/jsx/jsx';
 import 'codemirror/mode/diff/diff';
+import 'codemirror/addon/selection/active-line';
+import 'codemirror/addon/edit/matchbrackets.js'
 
 const styles = {
   code: css({
